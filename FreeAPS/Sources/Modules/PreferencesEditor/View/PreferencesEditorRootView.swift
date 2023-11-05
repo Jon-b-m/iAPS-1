@@ -18,6 +18,16 @@ extension PreferencesEditor {
             return formatter
         }
 
+        private var glucoseFormatter: NumberFormatter {
+            let formatter = NumberFormatter()
+            formatter.numberStyle = .decimal
+            if state.units == .mmolL {
+                formatter.maximumFractionDigits = 1
+            } else { formatter.maximumFractionDigits = 0 }
+            formatter.roundingMode = .ceiling
+            return formatter
+        }
+
         @State private var infoButtonPressed: InfoText?
 
         var body: some View {
@@ -59,7 +69,10 @@ extension PreferencesEditor {
                                     DecimalTextField(
                                         "0",
                                         value: self.$state.sections[sectionIndex].fields[fieldIndex].decimalValue,
-                                        formatter: formatter
+                                        formatter: self.state.sections[sectionIndex].fields[fieldIndex]
+                                            .decimalValue > 3 && self.state.sections[sectionIndex].fields[fieldIndex]
+                                            .decimalValue < 20 ? glucoseFormatter :
+                                            formatter
                                     )
                                 case .insulinCurve:
                                     Picker(

@@ -23,7 +23,7 @@ extension PreferencesEditor {
             let mainFields = [
                 Field(
                     displayName: NSLocalizedString("Max IOB", comment: "Max IOB"),
-                    type: .decimal(keypath: \.maxIOB),
+                    type: .decimal(keypath: \.maxIOB, isAglucoseValue: nil),
                     infoText: NSLocalizedString(
                         "Max IOB is the maximum amount of insulin on board from all sources – both basal (or SMB correction) and bolus insulin – that your loop is allowed to accumulate to treat higher-than-target BG. Unlike the other two OpenAPS safety settings (max_daily_safety_multiplier and current_basal_safety_multiplier), max_iob is set as a fixed number of units of insulin. As of now manual boluses are NOT limited by this setting. \n\n To test your basal rates during nighttime, you can modify the Max IOB setting to zero while in Closed Loop. This will enable low glucose suspend mode while testing your basal rates settings\n\n(Tip from https://www.loopandlearn.org/freeaps-x/#open-loop).",
                         comment: "Max IOB"
@@ -32,7 +32,7 @@ extension PreferencesEditor {
                 ),
                 Field(
                     displayName: NSLocalizedString("Max COB", comment: "Max COB"),
-                    type: .decimal(keypath: \.maxCOB),
+                    type: .decimal(keypath: \.maxCOB, isAglucoseValue: nil),
                     infoText: NSLocalizedString(
                         "The default of maxCOB is 120. (If someone enters more carbs in one or multiple entries, iAPS will cap COB to maxCOB and keep it at maxCOB until the carbs entered above maxCOB have shown to be absorbed. Essentially, this just limits UAM as a safety cap against weird COB calculations due to fluky data.)",
                         comment: "Max COB"
@@ -41,7 +41,7 @@ extension PreferencesEditor {
                 ),
                 Field(
                     displayName: NSLocalizedString("Max Daily Safety Multiplier", comment: "Max Daily Safety Multiplier"),
-                    type: .decimal(keypath: \.maxDailySafetyMultiplier),
+                    type: .decimal(keypath: \.maxDailySafetyMultiplier, isAglucoseValue: nil),
                     infoText: NSLocalizedString(
                         "This is an important OpenAPS safety limit. The default setting (which is unlikely to need adjusting) is 3. This means that OpenAPS will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump, or, if enabled, determined by autotune.",
                         comment: "Max Daily Safety Multiplier"
@@ -50,7 +50,7 @@ extension PreferencesEditor {
                 ),
                 Field(
                     displayName: NSLocalizedString("Current Basal Safety Multiplier", comment: "Current Basal Safety Multiplier"),
-                    type: .decimal(keypath: \.currentBasalSafetyMultiplier),
+                    type: .decimal(keypath: \.currentBasalSafetyMultiplier, isAglucoseValue: nil),
                     infoText: NSLocalizedString(
                         "This is another important OpenAPS safety limit. The default setting (which is also unlikely to need adjusting) is 4. This means that OpenAPS will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump, or, if enabled, determined by autotune.",
                         comment: "Current Basal Safety Multiplier"
@@ -60,7 +60,7 @@ extension PreferencesEditor {
 
                 Field(
                     displayName: NSLocalizedString("Autosens Max", comment: "Autosens Max"),
-                    type: .decimal(keypath: \.autosensMax),
+                    type: .decimal(keypath: \.autosensMax, isAglucoseValue: nil),
                     infoText: NSLocalizedString(
                         "This is a multiplier cap for autosens (and autotune) to set a 20% max limit on how high the autosens ratio can be, which in turn determines how high autosens can adjust basals, how low it can adjust ISF, and how low it can set the BG target.",
                         comment: "Autosens Max"
@@ -69,7 +69,7 @@ extension PreferencesEditor {
                 ),
                 Field(
                     displayName: NSLocalizedString("Autosens Min", comment: "Autosens Min"),
-                    type: .decimal(keypath: \.autosensMin),
+                    type: .decimal(keypath: \.autosensMin, isAglucoseValue: nil),
                     infoText: NSLocalizedString(
                         "The other side of the autosens safety limits, putting a cap on how low autosens can adjust basals, and how high it can adjust ISF and BG targets.",
                         comment: "Autosens Min"
@@ -90,7 +90,7 @@ extension PreferencesEditor {
                 ),
                 Field(
                     displayName: NSLocalizedString("Max Delta-BG Threshold SMB", comment: "Max Delta-BG Threshold"),
-                    type: .decimal(keypath: \.maxDeltaBGthreshold),
+                    type: .decimal(keypath: \.maxDeltaBGthreshold, isAglucoseValue: nil),
                     infoText: NSLocalizedString(
                         "Defaults to 0.2 (20%). Maximum positive percentual change of BG level to use SMB, above that will disable SMB. Hardcoded cap of 40%. For UAM fully-closed-loop 30% is advisable. Observe in log and popup (maxDelta 27 > 20% of BG 100 - disabling SMB!).",
                         comment: "Max Delta-BG Threshold"
@@ -147,13 +147,13 @@ extension PreferencesEditor {
                 ),
                 Field(
                     displayName: NSLocalizedString(
-                        "... When Blood Glucose Is Over (mg/dl):",
-                        comment: "... When Blood Glucose Is Over (mg/dl):"
+                        "... When Blood Glucose Is Over :",
+                        comment: "... When Blood Glucose Is Over :"
                     ),
-                    type: .decimal(keypath: \.enableSMB_high_bg_target),
+                    type: .decimal(keypath: \.enableSMB_high_bg_target, isAglucoseValue: units),
                     infoText: NSLocalizedString(
                         "Set the value enableSMB_high_bg will compare against to enable SMB. If BG > than this value, SMBs should enable.",
-                        comment: "... When Blood Glucose Is Over (mg/dl):"
+                        comment: "... When Blood Glucose Is Over :"
                     ),
                     settable: self
                 ),
@@ -168,7 +168,7 @@ extension PreferencesEditor {
                 ),
                 Field(
                     displayName: NSLocalizedString("Max SMB Basal Minutes", comment: "Max SMB Basal Minutes"),
-                    type: .decimal(keypath: \.maxSMBBasalMinutes),
+                    type: .decimal(keypath: \.maxSMBBasalMinutes, isAglucoseValue: nil),
                     infoText: NSLocalizedString(
                         "Defaults to start at 30. This is the maximum minutes of basal that can be delivered as a single SMB with uncovered COB. This gives the ability to make SMB more aggressive if you choose. It is recommended that the value is set to start at 30, in line with the default, and if you choose to increase this value, do so in no more than 15 minute increments, keeping a close eye on the effects of the changes. It is not recommended to set this value higher than 90 mins, as this may affect the ability for the algorithm to safely zero temp. It is also recommended that pushover is used when setting the value to be greater than default, so that alerts are generated for any predicted lows or highs.",
                         comment: "Max SMB Basal Minutes"
@@ -177,7 +177,7 @@ extension PreferencesEditor {
                 ),
                 Field(
                     displayName: NSLocalizedString("Max UAM SMB Basal Minutes", comment: "Max UAM SMB Basal Minutes"),
-                    type: .decimal(keypath: \.maxUAMSMBBasalMinutes),
+                    type: .decimal(keypath: \.maxUAMSMBBasalMinutes, isAglucoseValue: nil),
                     infoText: NSLocalizedString(
                         "Defaults to start at 30. This is the maximum minutes of basal that can be delivered by UAM as a single SMB when IOB exceeds COB. This gives the ability to make UAM more or less aggressive if you choose. It is recommended that the value is set to start at 30, in line with the default, and if you choose to increase this value, do so in no more than 15 minute increments, keeping a close eye on the effects of the changes. Reducing the value will cause UAM to dose less insulin for each SMB. It is not recommended to set this value higher than 60 mins, as this may affect the ability for the algorithm to safely zero temp. It is also recommended that pushover is used when setting the value to be greater than default, so that alerts are generated for any predicted lows or highs.",
                         comment: "Max UAM SMB Basal Minutes"
@@ -186,7 +186,7 @@ extension PreferencesEditor {
                 ),
                 Field(
                     displayName: NSLocalizedString("SMB DeliveryRatio", comment: "SMB DeliveryRatio"),
-                    type: .decimal(keypath: \.smbDeliveryRatio),
+                    type: .decimal(keypath: \.smbDeliveryRatio, isAglucoseValue: nil),
                     infoText: NSLocalizedString(
                         "Default value: 0.5 This is another key OpenAPS safety cap, and specifies what share of the total insulin required can be delivered as SMB. Increase this experimental value slowly and with caution.",
                         comment: "SMB DeliveryRatio"
@@ -195,7 +195,7 @@ extension PreferencesEditor {
                 ),
                 Field(
                     displayName: NSLocalizedString("SMB Interval", comment: "SMB Interval"),
-                    type: .decimal(keypath: \.smbInterval),
+                    type: .decimal(keypath: \.smbInterval, isAglucoseValue: nil),
                     infoText: NSLocalizedString(
                         "Minimum duration in minutes for new SMB since last SMB or manual bolus",
                         comment: "SMB Interval"
@@ -204,7 +204,7 @@ extension PreferencesEditor {
                 ),
                 Field(
                     displayName: NSLocalizedString("Bolus Increment", comment: "Bolus Increment"),
-                    type: .decimal(keypath: \.bolusIncrement),
+                    type: .decimal(keypath: \.bolusIncrement, isAglucoseValue: nil),
                     infoText: NSLocalizedString(
                         "Smallest enacted SMB amount. Minimum amount for Omnipod pumps is 0.05 U, whereas for Medtronic pumps it differs for various models, from 0.025 U to 0.10 U. Please check the minimum bolus amount which can be delivered by your pump. The default value is 0.1.",
                         comment: "Bolus Increment"
@@ -260,7 +260,7 @@ extension PreferencesEditor {
                 ),
                 Field(
                     displayName: NSLocalizedString("Half Basal Exercise Target", comment: "Half Basal Exercise Target"),
-                    type: .decimal(keypath: \.halfBasalExerciseTarget),
+                    type: .decimal(keypath: \.halfBasalExerciseTarget, isAglucoseValue: units),
                     infoText: NSLocalizedString(
                         "Set to a number, e.g. 160, which means when temp target is 160 mg/dL, run 50% basal at this level (120 = 75%; 140 = 60%). This can be adjusted, to give you more control over your exercise modes.",
                         comment: "Half Basal Exercise Target"
@@ -291,7 +291,7 @@ extension PreferencesEditor {
                 ),
                 Field(
                     displayName: NSLocalizedString("Insulin Peak Time", comment: "Insulin Peak Time"),
-                    type: .decimal(keypath: \.insulinPeakTime),
+                    type: .decimal(keypath: \.insulinPeakTime, isAglucoseValue: nil),
                     infoText: NSLocalizedString(
                         "Time of maximum blood glucose lowering effect of insulin, in minutes. Beware: Oref assumes for ultra-rapid (Lyumjev) & rapid-acting (Fiasp) curves minimal (35 & 50 min) and maximal (100 & 120 min) applicable insulinPeakTimes. Using a custom insulinPeakTime outside these bounds will result in issues with iAPS, longer loop calculations and possible red loops.",
                         comment: "Insulin Peak Time"
@@ -327,7 +327,7 @@ extension PreferencesEditor {
                 ),
                 Field(
                     displayName: NSLocalizedString("Min 5m Carbimpact", comment: "Min 5m Carbimpact"),
-                    type: .decimal(keypath: \.min5mCarbimpact),
+                    type: .decimal(keypath: \.min5mCarbimpact, isAglucoseValue: nil),
                     infoText: NSLocalizedString(
                         "This is a setting for default carb absorption impact per 5 minutes. The default is an expected 8 mg/dL/5min. This affects how fast COB is decayed in situations when carb absorption is not visible in BG deviations. The default of 8 mg/dL/5min corresponds to a minimum carb absorption rate of 24g/hr at a CSF of 4 mg/dL/g.",
                         comment: "Min 5m Carbimpact"
@@ -339,7 +339,7 @@ extension PreferencesEditor {
                         "Autotune ISF Adjustment Fraction",
                         comment: "Autotune ISF Adjustment Fraction"
                     ),
-                    type: .decimal(keypath: \.autotuneISFAdjustmentFraction),
+                    type: .decimal(keypath: \.autotuneISFAdjustmentFraction, isAglucoseValue: nil),
                     infoText: NSLocalizedString(
                         "The default of 0.5 for this value keeps autotune ISF closer to pump ISF via a weighted average of fullNewISF and pumpISF. 1.0 allows full adjustment, 0 is no adjustment from pump ISF.",
                         comment: "Autotune ISF Adjustment Fraction"
@@ -348,7 +348,7 @@ extension PreferencesEditor {
                 ),
                 Field(
                     displayName: NSLocalizedString("Remaining Carbs Fraction", comment: "Remaining Carbs Fraction"),
-                    type: .decimal(keypath: \.remainingCarbsFraction),
+                    type: .decimal(keypath: \.remainingCarbsFraction, isAglucoseValue: nil),
                     infoText: NSLocalizedString(
                         "This is the fraction of carbs we’ll assume will absorb over 4h if we don’t yet see carb absorption.",
                         comment: "Remaining Carbs Fraction"
@@ -357,7 +357,7 @@ extension PreferencesEditor {
                 ),
                 Field(
                     displayName: NSLocalizedString("Remaining Carbs Cap", comment: "Remaining Carbs Cap"),
-                    type: .decimal(keypath: \.remainingCarbsCap),
+                    type: .decimal(keypath: \.remainingCarbsCap, isAglucoseValue: nil),
                     infoText: NSLocalizedString(
                         "This is the amount of the maximum number of carbs we’ll assume will absorb over 4h if we don’t yet see carb absorption.",
                         comment: "Remaining Carbs Cap"
@@ -366,7 +366,7 @@ extension PreferencesEditor {
                 ),
                 Field(
                     displayName: NSLocalizedString("Noisy CGM Target Multiplier", comment: "Noisy CGM Target Multiplier"),
-                    type: .decimal(keypath: \.noisyCGMTargetMultiplier),
+                    type: .decimal(keypath: \.noisyCGMTargetMultiplier, isAglucoseValue: nil),
                     infoText: NSLocalizedString(
                         "Defaults to 1.3. Increase target by this amount when looping off raw/noisy CGM data",
                         comment: "Noisy CGM Target Multiplier"
