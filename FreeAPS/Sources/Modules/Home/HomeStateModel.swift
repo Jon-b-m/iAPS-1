@@ -78,7 +78,6 @@ extension Home {
         @Published var displayExpiration = false
         @Published var cgm: CGMType = .nightscout
         @Published var sensorDays: Double = 10
-        @Published var anubis: Bool = false
         @Published var carbButton: Bool = true
         @Published var profileButton: Bool = true
 
@@ -173,7 +172,6 @@ extension Home {
             displayExpiration = settingsManager.settings.displayExpiration
             cgm = settingsManager.settings.cgm
             sensorDays = settingsManager.settings.sensorDays
-            anubis = settingsManager.settings.anubis
             carbButton = settingsManager.settings.carbButton
             profileButton = settingsManager.settings.profileButton
 
@@ -667,7 +665,6 @@ extension Home.StateModel:
         displayExpiration = settingsManager.settings.displayExpiration
         cgm = settingsManager.settings.cgm
         sensorDays = settingsManager.settings.sensorDays
-        anubis = settingsManager.settings.anubis
         carbButton = settingsManager.settings.carbButton
         profileButton = settingsManager.settings.profileButton
         setupGlucose()
