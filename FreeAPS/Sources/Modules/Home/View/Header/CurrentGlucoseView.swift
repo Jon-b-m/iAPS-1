@@ -142,8 +142,14 @@ struct CurrentGlucoseView: View {
         ZStack {
             if let date = recentGlucose?.sessionStartDate {
                 let remainingTime: TimeInterval = (-1 * date.timeIntervalSinceNow)
+                let expiration = sensordays - remainingTime
+                let secondsOfDay = 8.64E4
+                let colour: Color = colorScheme == .light ? .secondary : Color.black
+                let lineColour: Color = remainingTime >= sensordays - secondsOfDay * 1 ? Color.red
+                    .opacity(0.9) : remainingTime >= sensordays - secondsOfDay * 2 ? Color
+                    .orange : Color.white
 
-                Sage(amount: remainingTime, expiration: remainingTime, sensorDays: sensordays)
+                Sage(amount: remainingTime, expiration: expiration, lineColour: lineColour, sensordays: sensordays)
                     .frame(width: 38, height: 38)
                     .overlay {
                         HStack {
@@ -153,7 +159,7 @@ struct CurrentGlucoseView: View {
                                     .replacingOccurrences(of: ",", with: " ") :
                                     (remainingTimeFormatter.string(from: remainingTime) ?? "")
                                     .replacingOccurrences(of: ",", with: " ")
-                            ).foregroundStyle(colorScheme == .light ? .secondary : Color.black)
+                            ).foregroundStyle(colour)
                         }
                     }
             }

@@ -165,14 +165,14 @@ struct Sage: View {
     @Environment(\.colorScheme) var colorScheme
     let amount: Double
     let expiration: Double
-    let sensorDays: TimeInterval
+    let lineColour: Color
+    let sensordays: TimeInterval
     var body: some View {
-        let fill = max(amount / expiration, 0.07)
-        let secondsOfDay = 8.64E4
-        let colour: Color = amount >= sensorDays * secondsOfDay - secondsOfDay ? .red
-            .opacity(0.9) : amount >= sensorDays * secondsOfDay - 2 * secondsOfDay ? .orange
-            .opacity(0.8) : Color.white
+        let fill = max(expiration / amount, 0.15)
+        let colour: Color = (sensordays - expiration > 0.5 * 8.64E4) ? .red
+            .opacity(0.9) : (sensordays - expiration > 2 * 8.64E4) ? .orange.opacity(0.8) : Color.white
         let scheme = colorScheme == .light ? Color(.systemGray5) : Color(.systemGray2)
+
         Circle()
             .stroke(scheme, lineWidth: 6)
             .background(
@@ -185,7 +185,7 @@ struct Sage: View {
                                     location: fill
                                 ),
                                 Gradient.Stop(
-                                    color: scheme,
+                                    color: Color.white,
                                     location: fill
                                 )
                             ]),
@@ -194,7 +194,7 @@ struct Sage: View {
                         )
                     )
                     .shadow(radius: 4)
-            ).overlay { Circle().stroke(Color(.white), lineWidth: 1).scaleEffect(x: 0.82, y: 0.82) }
+            )
     }
 }
 
