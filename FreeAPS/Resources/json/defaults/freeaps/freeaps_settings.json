@@ -97,6 +97,5 @@
   "extended_overrides": false,
   "displayExpiration": false,
   "fpus": true,
-  "fpuAmounts": false,
-  "lightMode": LightMode.auto
+  "fpuAmounts": false
 }
