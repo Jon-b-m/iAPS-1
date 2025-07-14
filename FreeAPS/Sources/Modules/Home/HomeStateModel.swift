@@ -685,7 +685,7 @@ extension Home.StateModel:
         case .enlite: CGMType.enlite.expiration
         default: settingsManager.settings.sensorDays
         }
-        
+
         setupGlucose()
         setupOverrideHistory()
         setupData()

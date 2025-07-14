@@ -416,7 +416,7 @@ extension Home {
                         materialOpacity: materialOpacity
                     )
                     .frame(width: 12, height: 38)
-                    .offset(x: 0, y: -5)
+                    .offset(y: -5)
                     HStack(spacing: 0) {
                         if let loop = state.data.suggestion, let cob = loop.cob {
                             Text(numberFormatter.string(from: cob as NSNumber) ?? "0")
@@ -426,7 +426,7 @@ extension Home {
                             Text("?").font(.statusFont).bold()
                         }
                         Text(NSLocalizedString(" g", comment: "gram of carbs")).font(.statusFont).foregroundStyle(.secondary)
-                    }.offset(x: 0, y: 5)
+                    }.offset(y: 5)
                 }
                 // Instead of Spacer
                 Text(" ")
@@ -444,7 +444,7 @@ extension Home {
                         materialOpacity: materialOpacity
                     )
                     .frame(width: 12, height: 38)
-                    .offset(x: 0, y: -5)
+                    .offset(y: -5)
                     HStack(spacing: 0) {
                         if let loop = state.data.suggestion, let iob = loop.iob {
                             Text(
@@ -454,10 +454,9 @@ extension Home {
                             Text("?").font(.statusFont).bold()
                         }
                         Text(NSLocalizedString(" U", comment: "Insulin unit")).font(.statusFont).foregroundStyle(.secondary)
-                    }.offset(x: 0, y: 5)
+                    }.offset(y: 5)
                 }
-            }
-            .offset(y: 5)
+            }.offset(x: 5, y: 5)
         }
 
         var preview: some View {

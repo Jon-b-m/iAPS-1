@@ -141,23 +141,23 @@ struct CurrentGlucoseView: View {
     private var sageView: some View {
         ZStack {
             if let date = recentGlucose?.sessionStartDate {
-                let remainingTime: TimeInterval = (-1 * date.timeIntervalSinceNow)
-                let expiration = sensordays - remainingTime
+                let sensorAge: TimeInterval = (-1 * date.timeIntervalSinceNow)
+                let expiration = sensordays - sensorAge
                 let secondsOfDay = 8.64E4
                 let colour: Color = colorScheme == .light ? .secondary : Color.black
-                let lineColour: Color = remainingTime >= sensordays - secondsOfDay * 1 ? Color.red
-                    .opacity(0.9) : remainingTime >= sensordays - secondsOfDay * 2 ? Color
+                let lineColour: Color = sensorAge >= sensordays - secondsOfDay * 1 ? Color.red
+                    .opacity(0.9) : sensorAge >= sensordays - secondsOfDay * 2 ? Color
                     .orange : Color.white
 
-                Sage(amount: remainingTime, expiration: expiration, lineColour: lineColour, sensordays: sensordays)
-                    .frame(width: 38, height: 38)
+                Sage(amount: sensorAge, expiration: expiration, lineColour: lineColour, sensordays: sensordays)
+                    .frame(width: 36, height: 36)
                     .overlay {
                         HStack {
                             Text(
-                                remainingTime >= 1 * 8.64E4 ?
-                                    (remainingTimeFormatterDays.string(from: remainingTime) ?? "")
+                                sensorAge >= 1 * 8.64E4 ?
+                                    (remainingTimeFormatterDays.string(from: sensorAge) ?? "")
                                     .replacingOccurrences(of: ",", with: " ") :
-                                    (remainingTimeFormatter.string(from: remainingTime) ?? "")
+                                    (remainingTimeFormatter.string(from: sensorAge) ?? "")
                                     .replacingOccurrences(of: ",", with: " ")
                             ).foregroundStyle(colour)
                         }
@@ -167,6 +167,7 @@ struct CurrentGlucoseView: View {
         .font(.footnote)
         .dynamicTypeSize(DynamicTypeSize.medium ... DynamicTypeSize.large)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing).padding(20)
+        .offset(x: -5)
     }
 
     private var adjustments: (degree: Double, x: CGFloat, y: CGFloat) {

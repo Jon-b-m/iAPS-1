@@ -169,12 +169,12 @@ struct Sage: View {
     let sensordays: TimeInterval
     var body: some View {
         let fill = max(expiration / amount, 0.15)
-        let colour: Color = (sensordays - expiration > 0.5 * 8.64E4) ? .red
-            .opacity(0.9) : (sensordays - expiration > 2 * 8.64E4) ? .orange.opacity(0.8) : Color.white
+        let colour: Color = (expiration < 0.5 * 8.64E4) ? .red
+            .opacity(0.9) : (expiration < 2 * 8.64E4) ? .orange.opacity(0.8) : Color.white
         let scheme = colorScheme == .light ? Color(.systemGray5) : Color(.systemGray2)
 
         Circle()
-            .stroke(scheme, lineWidth: 6)
+            .stroke(scheme, lineWidth: 5)
             .background(
                 Circle()
                     .fill(
