@@ -2859,7 +2859,7 @@ Enact a temp Basal or a temp target */
 "Remaining Carbs Cap" = "Поглинання Вуглеводів, що залишилися";
 
 /* "Remaining Carbs Cap" */
-"This is the amount of the maximum number of carbs we’ll assume will absorb over 4h if we don’t yet see carb absorption. Maximum 90" = "Це значення максимальної кількості вуглеводів, яке імовірно буде поглинено через 4 години, якщо алгоритм не побачить поглинання вуглеводів.";
+"This is the amount of the maximum number of carbs we’ll assume will absorb over 4h if we don’t yet see carb absorption. Maximum 90" = "This is the amount of the maximum number of carbs we’ll assume will absorb over 4h if we don’t yet see carb absorption. Maximum 90";
 
 /* Headline ”Max SMB Basal Minutes" */
 "Max SMB Basal Minutes" = "Максимум SMB Базальних Хвилин";
@@ -3106,16 +3106,10 @@ Enact a temp Basal or a temp target */
 "Display carb equivalent amount" = "Показати еквівалентну кількість вуглеводів";
 
 /* UI/UX option */
-"Display Sensor Time Remaining" = "Відображати час Сенсору що залишився.";
-
-/* UI/UX option */
-"Display Sensor Age, but not Time Remaining" = "Відображати вік Сенсору замість часу, що залишився.";
-
-/* UI/UX option */
 "Display Ratio and a History View button" = "Відображати Співвідношення та Кнопку перегляду історії";
 
 /* UI/UX option */
-"Auto ISF Home View" = "Авто ISF на Головному екрані";
+"Home View Ratio Button" = "Кнопка співвідношення сторін головної сторінки";
 
 /* UI/UX option */
 "Light" = "Світлий";

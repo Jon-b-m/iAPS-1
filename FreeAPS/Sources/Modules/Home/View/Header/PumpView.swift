@@ -47,8 +47,6 @@ struct PumpView: View {
             // OmniPods
             if let date = expiresAtDate {
                 // Insulin amount (U)
-                remainingTime(time: date.timeIntervalSince(timerDate))
-                    .font(.pumpFont)
                 if let insulin = reservoir {
                     // 120 % due to being non rectangular. +10 because of bottom inserter
                     let amountFraction = 1.0 - (Double(insulin + 10) * 1.2 / 200)

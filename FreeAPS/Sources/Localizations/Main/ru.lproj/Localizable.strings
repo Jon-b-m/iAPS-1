@@ -1176,7 +1176,7 @@ Enact a temp Basal or a temp target */
 "Temp basal Amount in U/h" = "ВБС в Ед/ч";
 
 /* */
-"Cancel Temp" = "Cancel Temp";
+"Cancel Temp" = "Отменить ВБС";
 
 
 
@@ -2858,7 +2858,7 @@ Enact a temp Basal or a temp target */
 "Remaining Carbs Cap" = "Поглощение оставшихся углеводов";
 
 /* "Remaining Carbs Cap" */
-"This is the amount of the maximum number of carbs we’ll assume will absorb over 4h if we don’t yet see carb absorption. Maximum 90" = "Это значение максимального количества углеводов, которое предположительно будет поглощено спустя 4 часа, если алгоритм не увидит поглощения углеводов.";
+"This is the amount of the maximum number of carbs we’ll assume will absorb over 4h if we don’t yet see carb absorption. Maximum 90" = "Это максимальное количество углеводов, которое мы предполагаем усвоится за 4 часа, если усвоение углеводов еще не началось. Максимум 90";
 
 /* Headline ”Max SMB Basal Minutes" */
 "Max SMB Basal Minutes" = "Максимум SMB базальных минут";
@@ -3105,16 +3105,10 @@ Enact a temp Basal or a temp target */
 "Display carb equivalent amount" = "Отображать эквиваленты углеводов";
 
 /* UI/UX option */
-"Display Sensor Time Remaining" = "Отображать оставшееся время датчика";
-
-/* UI/UX option */
-"Display Sensor Age, but not Time Remaining" = "Отображать возраст датчика, вместо оставшегося времени";
-
-/* UI/UX option */
 "Display Ratio and a History View button" = "Отображать соотношение и кнопку просмотра истории";
 
 /* UI/UX option */
-"Auto ISF Home View" = "Авто ISF на главном экране";
+"Home View Ratio Button" = "Home View Ratio Button";
 
 /* UI/UX option */
 "Light" = "Светлый";
