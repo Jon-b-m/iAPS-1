@@ -135,7 +135,7 @@ struct CurrentGlucoseView: View {
                 .offset(x: offset, y: 10)
         }
         .dynamicTypeSize(DynamicTypeSize.medium ... DynamicTypeSize.large)
-        .frame(maxHeight: .infinity, alignment: .center).offset(x: 110.5, y: -7)
+        .frame(maxHeight: .infinity, alignment: .center).offset(x: 110.5, y: -9)
     }
 
     private var sageView: some View {
