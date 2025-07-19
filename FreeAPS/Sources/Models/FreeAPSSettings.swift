@@ -403,34 +403,6 @@ extension FreeAPSSettings: Decodable {
             settings.timeSettings = timeSettings
         }
 
-        if let hypoSound = try? container.decode(String.self, forKey: .hypoSound) {
-            settings.hypoSound = hypoSound
-        }
-
-        if let hyperSound = try? container.decode(String.self, forKey: .hyperSound) {
-            settings.hyperSound = hyperSound
-        }
-
-        if let ascending = try? container.decode(String.self, forKey: .ascending) {
-            settings.ascending = ascending
-        }
-
-        if let descending = try? container.decode(String.self, forKey: .descending) {
-            settings.descending = descending
-        }
-
-        if let carbSound = try? container.decode(String.self, forKey: .carbSound) {
-            settings.carbSound = carbSound
-        }
-
-        if let bolusFailure = try? container.decode(String.self, forKey: .bolusFailure) {
-            settings.bolusFailure = bolusFailure
-        }
-
-        if let missingLoops = try? container.decode(Bool.self, forKey: .missingLoops) {
-            settings.missingLoops = missingLoops
-        }
-
         if let profilesOrTempTargets = try? container.decode(Bool.self, forKey: .profilesOrTempTargets) {
             settings.profilesOrTempTargets = profilesOrTempTargets
         }
