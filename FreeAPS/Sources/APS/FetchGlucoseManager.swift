@@ -101,7 +101,7 @@ final class BaseFetchGlucoseManager: FetchGlucoseManager, Injectable {
         glucose: [BloodGlucose] = [],
         glucoseFromHealth: [BloodGlucose] = []
     ) {
-        let allGlucose = glucose + glucoseFromHealth
+        let allGlucose = glucose
         var filteredByDate: [BloodGlucose] = []
         var filtered: [BloodGlucose] = []
 
@@ -150,9 +150,7 @@ final class BaseFetchGlucoseManager: FetchGlucoseManager, Injectable {
         }
 
         glucoseStorage.storeGlucose(filtered)
-
         deviceDataManager.heartbeat(date: Date())
-
         nightscoutManager.uploadGlucose()
 
         // end of the BG tasks
