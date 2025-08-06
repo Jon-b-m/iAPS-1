@@ -71,14 +71,13 @@ extension Home {
         @Published var skipGlucoseChart: Bool = false
         @Published var displayDelta: Bool = false
         @Published var openAPSSettings: Preferences?
-        @Published var extended = true
         @Published var maxIOB: Decimal = 0
         @Published var maxCOB: Decimal = 0
         @Published var autoisf = false
         @Published var displayExpiration = false
+        @Published var displaySAGE = true
         @Published var cgm: CGMType = .nightscout
         @Published var sensorDays: Double = 10
-        @Published var anubis: Bool = false
         @Published var carbButton: Bool = true
         @Published var profileButton: Bool = true
 
@@ -86,6 +85,8 @@ extension Home {
         var data = ChartModel(
             suggestion: nil,
             glucose: [],
+            activity: [],
+            cob: [],
             isManual: [],
             tempBasals: [],
             boluses: [],
@@ -107,18 +108,26 @@ extension Home {
             thresholdLines: true,
             overrideHistory: [],
             minimumSMB: 0,
+            insulinDIA: 7,
+            insulinPeak: 75,
             maxBolus: 0,
             maxBolusValue: 1,
+            maxIOB: 0,
+            maxCOB: 1,
             useInsulinBars: true,
             screenHours: 6,
             fpus: true,
-            fpuAmounts: false
+            fpuAmounts: false,
+            showInsulinActivity: false,
+            showCobChart: false,
+            iob: nil
         )
 
         override func subscribe() {
             setupGlucose()
             setupBasals()
             setupBoluses()
+            setupActivity()
             setupSuspensions()
             setupPumpSettings()
             setupBasalProfile()
@@ -131,6 +140,7 @@ extension Home {
             setupOverrideHistory()
             setupLoopStats()
             setupData()
+            setupCob()
 
             data.suggestion = provider.suggestion
             dynamicVariables = provider.dynamicVariables
@@ -154,26 +164,43 @@ extension Home {
             data.displayXgridLines = settingsManager.settings.xGridLines
             data.displayYgridLines = settingsManager.settings.yGridLines
             data.thresholdLines = settingsManager.settings.rulerMarks
+            data.showInsulinActivity = settingsManager.settings.showInsulinActivity
+            data.showCobChart = settingsManager.settings.showCobChart
             useTargetButton = settingsManager.settings.useTargetButton
             data.screenHours = settingsManager.settings.hours
             alwaysUseColors = settingsManager.settings.alwaysUseColors
             useCalc = settingsManager.settings.useCalc
             data.minimumSMB = settingsManager.settings.minimumSMB
+            data.insulinDIA = settingsManager.pumpSettings.insulinActionCurve
+            data.insulinPeak = settingsManager.preferences.useCustomPeakTime ? settingsManager.preferences.insulinPeakTime :
+                (settingsManager.preferences.curve == .ultraRapid ? 55 : 75)
+
             data.maxBolus = settingsManager.pumpSettings.maxBolus
+            data.maxIOB = settingsManager.preferences.maxIOB
+            data.maxCOB = settingsManager.preferences.maxCOB
             data.useInsulinBars = settingsManager.settings.useInsulinBars
             data.fpus = settingsManager.settings.fpus
             data.fpuAmounts = settingsManager.settings.fpuAmounts
             skipGlucoseChart = settingsManager.settings.skipGlucoseChart
             displayDelta = settingsManager.settings.displayDelta
-            extended = settingsManager.settings.extendHomeView
             maxIOB = settingsManager.preferences.maxIOB
             maxCOB = settingsManager.preferences.maxCOB
             autoisf = settingsManager.settings.autoisf
             hours = settingsManager.settings.hours
             displayExpiration = settingsManager.settings.displayExpiration
+            displaySAGE = settingsManager.settings.displaySAGE
             cgm = settingsManager.settings.cgm
-            sensorDays = settingsManager.settings.sensorDays
-            anubis = settingsManager.settings.anubis
+
+            sensorDays = switch settingsManager.settings.cgm {
+            case .nightscout: CGMType.nightscout.expiration
+            case .dexcomG5: CGMType.dexcomG5.expiration
+            case .dexcomG6: CGMType.dexcomG6.expiration
+            case .dexcomG7: CGMType.dexcomG7.expiration
+            case .libreTransmitter: CGMType.libreTransmitter.expiration
+            case .enlite: CGMType.enlite.expiration
+            default: settingsManager.settings.sensorDays
+            }
+
             carbButton = settingsManager.settings.carbButton
             profileButton = settingsManager.settings.profileButton
 
@@ -429,6 +456,20 @@ extension Home {
             }
         }
 
+        private func setupActivity() {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                self.data.activity = CoreDataStorage().fetchInsulinData(interval: DateFilter().day)
+            }
+        }
+
+        private func setupCob() {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                self.data.cob = self.iobData
+            }
+        }
+
         private func setupPumpSettings() {
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }
@@ -548,6 +589,19 @@ extension Home {
             }
         }
 
+        private func setupIOB() {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                Task {
+                    do {
+                        if let sync = try await self.provider.iob() {
+                            self.data.iob = sync
+                        }
+                    } catch { debug(.apsManager, "Error - Couldn't update foreground IOB value.") }
+                }
+            }
+        }
+
         private func setupData() {
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }
@@ -627,11 +681,14 @@ extension Home.StateModel:
 
     func suggestionDidUpdate(_ suggestion: Suggestion) {
         data.suggestion = suggestion
+        data.iob = data.suggestion?.iob
         carbsRequired = suggestion.carbsReq
         setStatusTitle()
         setupOverrideHistory()
         setupLoopStats()
         setupData()
+        setupActivity()
+        setupCob()
     }
 
     func settingsDidChange(_ settings: FreeAPSSettings) {
@@ -648,6 +705,8 @@ extension Home.StateModel:
         data.displayXgridLines = settingsManager.settings.xGridLines
         data.displayYgridLines = settingsManager.settings.yGridLines
         data.thresholdLines = settingsManager.settings.rulerMarks
+        data.showInsulinActivity = settingsManager.settings.showInsulinActivity
+        data.showCobChart = settingsManager.settings.showCobChart
         useTargetButton = settingsManager.settings.useTargetButton
         data.screenHours = settingsManager.settings.hours
         alwaysUseColors = settingsManager.settings.alwaysUseColors
@@ -659,17 +718,25 @@ extension Home.StateModel:
         data.fpuAmounts = settingsManager.settings.fpuAmounts
         skipGlucoseChart = settingsManager.settings.skipGlucoseChart
         displayDelta = settingsManager.settings.displayDelta
-        extended = settingsManager.settings.extendHomeView
         maxIOB = settingsManager.preferences.maxIOB
         maxCOB = settingsManager.preferences.maxCOB
         autoisf = settingsManager.settings.autoisf
         hours = settingsManager.settings.hours
         displayExpiration = settingsManager.settings.displayExpiration
+        displaySAGE = settingsManager.settings.displaySAGE
         cgm = settingsManager.settings.cgm
-        sensorDays = settingsManager.settings.sensorDays
-        anubis = settingsManager.settings.anubis
         carbButton = settingsManager.settings.carbButton
         profileButton = settingsManager.settings.profileButton
+        sensorDays = switch settingsManager.settings.cgm {
+        case .nightscout: CGMType.nightscout.expiration
+        case .dexcomG5: CGMType.dexcomG5.expiration
+        case .dexcomG6: CGMType.dexcomG6.expiration
+        case .dexcomG7: CGMType.dexcomG7.expiration
+        case .libreTransmitter: CGMType.libreTransmitter.expiration
+        case .enlite: CGMType.enlite.expiration
+        default: settingsManager.settings.sensorDays
+        }
+
         setupGlucose()
         setupOverrideHistory()
         setupData()
@@ -680,6 +747,8 @@ extension Home.StateModel:
         setupBoluses()
         setupSuspensions()
         setupAnnouncements()
+        setupIOB()
+        setupActivity()
     }
 
     func pumpSettingsDidChange(_: PumpSettings) {
