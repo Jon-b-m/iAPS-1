@@ -1816,9 +1816,7 @@ extension MainChartView {
 
     private func minMaxYValues() -> (min: Int, max: Int) {
         var maxValue = data.glucose.compactMap(\.glucose).max() ?? Config.maxGlucose
-        if let maxPredValue = maxPredValue() {
-            maxValue = max(maxValue, maxPredValue)
-        }
+        
         if let maxTargetValue = maxTargetValue() {
             maxValue = max(maxValue, maxTargetValue)
         }
