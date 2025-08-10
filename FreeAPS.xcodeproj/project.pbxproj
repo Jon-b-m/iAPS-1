@@ -843,6 +843,13 @@
 			remoteGlobalIDString = A94AE4E4235A89B5005CA320;
 			remoteInfo = TidepoolServiceKitPlugin;
 		};
+		1956D0032E49487800A5BDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1956CFFF2E49487700A5BDAF /* DanaKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 84752E8226ED0FFE009FD801;
+			remoteInfo = DanaKit;
+		};
 		19603AC02E49439300CCC88B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 19603AAB2E49434500CCC88B /* LibreTransmitter.xcodeproj */;
@@ -1024,6 +1031,7 @@
 		1956CF522E49456300A5BDAF /* OmniKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = OmniKit.xcodeproj; sourceTree = "<group>"; };
 		1956CF642E49457A00A5BDAF /* RileyLinkKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = RileyLinkKit.xcodeproj; sourceTree = "<group>"; };
 		1956CF762E49459400A5BDAF /* TidepoolService.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = TidepoolService.xcodeproj; sourceTree = "<group>"; };
+		1956CFFF2E49487700A5BDAF /* DanaKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = DanaKit.xcodeproj; sourceTree = "<group>"; };
 		1956FB202AFF79E200C7B4FF /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
 		195A70B52DC0C3C8009A2F01 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		195A70B62DC0C3C9009A2F01 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -1833,6 +1841,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		1956D0002E49487700A5BDAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1956D0042E49487800A5BDAF /* DanaKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		195D80B22AF696EE00D25097 /* Dynamic */ = {
 			isa = PBXGroup;
 			children = (
@@ -2475,6 +2491,7 @@
 		388E594F25AD948C0019842D = {
 			isa = PBXGroup;
 			children = (
+				1956CFFF2E49487700A5BDAF /* DanaKit.xcodeproj */,
 				1956CF762E49459400A5BDAF /* TidepoolService.xcodeproj */,
 				1956CF642E49457A00A5BDAF /* RileyLinkKit.xcodeproj */,
 				1956CF522E49456300A5BDAF /* OmniKit.xcodeproj */,
@@ -3490,6 +3507,10 @@
 					ProjectRef = 1956CEDA2E49447B00A5BDAF /* CGMBLEKit.xcodeproj */;
 				},
 				{
+					ProductGroup = 1956D0002E49487700A5BDAF /* Products */;
+					ProjectRef = 1956CFFF2E49487700A5BDAF /* DanaKit.xcodeproj */;
+				},
+				{
 					ProductGroup = 1956CF052E4944B600A5BDAF /* Products */;
 					ProjectRef = 1956CF042E4944B600A5BDAF /* G7SensorKit.xcodeproj */;
 				},
@@ -3878,6 +3899,13 @@
 			fileType = wrapper.framework;
 			path = TidepoolServiceKitPlugin.loopplugin;
 			remoteRef = 1956CF862E49459400A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956D0042E49487800A5BDAF /* DanaKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DanaKit.framework;
+			remoteRef = 1956D0032E49487800A5BDAF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		19603AC12E49439300CCC88B /* LibreTransmitter.framework */ = {
