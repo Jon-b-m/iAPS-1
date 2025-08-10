@@ -4,39 +4,33 @@ import SwiftUI
 import UIKit
 
 extension CGM {
-    struct CGMSettingsView: UIViewControllerRepresentable {
-        let cgmManager: CGMManagerUI
+    struct CGMSetupView: UIViewControllerRepresentable {
+        let CGMType: cgmName
         let bluetoothManager: BluetoothStateManager
         let unit: GlucoseUnits
         weak var completionDelegate: CompletionDelegate?
+        weak var setupDelegate: CGMManagerOnboardingDelegate?
+        let pluginCGMManager: PluginManager
 
-        func makeUIViewController(context _: UIViewControllerRepresentableContext<CGMSettingsView>) -> UIViewController {
-            let displayGlucoseUnitObservable: DisplayGlucoseUnitObservable
-            switch unit {
-            case .mgdL:
-                displayGlucoseUnitObservable = DisplayGlucoseUnitObservable(displayGlucoseUnit: .milligramsPerDeciliter)
-            case .mmolL:
-                displayGlucoseUnitObservable = DisplayGlucoseUnitObservable(displayGlucoseUnit: .millimolesPerLiter)
+        func makeUIViewController(context _: UIViewControllerRepresentableContext<CGMSetupView>) -> UIViewController {
+            var setupViewController: SetupUIResult<
+ @@ -31,38 +26,19 @@ extension CGM {
+                displayGlucosePreference = DisplayGlucosePreference(displayGlucoseUnit: .millimolesPerLiter)
             }
 
-            var vc = cgmManager.settingsViewController(
-                bluetoothProvider: bluetoothManager,
-                displayGlucoseUnitObservable: displayGlucoseUnitObservable,
-                colorPalette: .default,
-                allowDebugFeatures: false
-            )
-            // vc.cgmManagerOnboardingDelegate =
-            // vc.completionDelegate = self
-            vc.completionDelegate = completionDelegate
-
-            return vc
-        }
-
-        func updateUIViewController(
-            _ uiViewController: UIViewController,
-            context _: UIViewControllerRepresentableContext<CGMSettingsView>
-        ) {
-            uiViewController.isModalInPresentation = true
-        }
-    }
-}
+            switch CGMType.type {
+            case .plugin:
+                if let cgmManagerUIType = pluginCGMManager.getCGMManagerTypeByIdentifier(CGMType.id) {
+                    setupViewController = cgmManagerUIType.setupViewController(
+                        bluetoothProvider: bluetoothManager,
+                        displayGlucosePreference: displayGlucosePreference,
+                        colorPalette: .default,
+                        allowDebugFeatures: false,
+                        prefersToSkipUserInteraction: false
+                    )
+                } else {
+                    break
+                }
+            default:
+                break
+            }

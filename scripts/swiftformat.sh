@@ -1,10 +1,10 @@
 #! /bin/sh
 
 function assertEnvironment {
-	if [ -z $1 ]; then 
-		echo $2
-		exit 127
-	fi
+    if [ -z $1 ]; then
+        echo $2
+        exit 127
+    fi
 }
 
 assertEnvironment "${SRCROOT}" "Please set SRCROOT to project root folder"
@@ -97,4 +97,4 @@ trailingClosures \
 --typeattributes same-line \
 --varattributes same-line \
 --wrapcollections before-first \
---exclude Pods,Generated,R.generated.swift,fastlane/swift,Dependencies
+--exclude Pods,Generated,R.generated.swift,fastlane/swift,Dependencies, LoopKit, LibreTransmitter,G7SensorKit,OmniKit, dexcom-sahre-client-swift,CGMBLEKit,RileyLinkKit,OmniBLE,MinimedKit

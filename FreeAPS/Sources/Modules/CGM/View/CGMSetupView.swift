@@ -1,7 +1,11 @@
+import CGMBLEKitUI
+import G7SensorKit
+import G7SensorKitUI
+import LibreTransmitter
+import LibreTransmitterUI
 import LoopKit
 import LoopKitUI
 import SwiftUI
-import UIKit
 
 extension CGM {
     struct CGMSetupView: UIViewControllerRepresentable {

@@ -1,7 +1,5 @@
-import CGMBLEKit
 import Combine
 import CoreData
-import G7SensorKit
 import LoopKit
 import SwiftDate
 import SwiftUI
@@ -47,17 +45,7 @@ extension NightscoutConfig {
             subscribeSetting(\.isUploadEnabled, on: $isUploadEnabled) { isUploadEnabled = $0 }
             subscribeSetting(\.useLocalGlucoseSource, on: $useLocalSource) { useLocalSource = $0 }
             subscribeSetting(\.localGlucosePort, on: $localPort.map(Int.init)) { localPort = Decimal($0) }
-            subscribeSetting(\.uploadGlucose, on: $uploadGlucose, initial: { uploadGlucose = $0 }, didSet: { val in
-                if let cgmManagerG5 = self.cgmManager.glucoseSource.cgmManager as? G5CGMManager {
-                    cgmManagerG5.shouldSyncToRemoteService = val
-                }
-                if let cgmManagerG6 = self.cgmManager.glucoseSource.cgmManager as? G6CGMManager {
-                    cgmManagerG6.shouldSyncToRemoteService = val
-                }
-                if let cgmManagerG7 = self.cgmManager.glucoseSource.cgmManager as? G7CGMManager {
-                    cgmManagerG7.uploadReadings = val
-                }
-            })
+            subscribeSetting(\.uploadGlucose, on: $uploadGlucose, initial: { uploadGlucose = $0 }
         }
 
         func connect() {
