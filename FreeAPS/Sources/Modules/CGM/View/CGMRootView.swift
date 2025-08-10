@@ -69,13 +69,15 @@ extension CGM {
                             )
                         }
                     }
-
-                    if state.cgm == .libreTransmitter {
-                        Button("Configure Libre Transmitter") {
-                            state.showModal(for: .libreConfig)
+                    
+                    if state.cgmCurrent.type == .plugin {
+                        Section {
+                            Button("CGM Configuration") {
+                                setupCGM.toggle()
+                            }
                         }
-                        Text("Calibrations").navigationLink(to: .calibrations, from: self)
                     }
+
                     Section(header: Text("Calendar")) {
                         Toggle("Create Events in Calendar", isOn: $state.createCalendarEvents)
                         if state.calendarIDs.isNotEmpty {

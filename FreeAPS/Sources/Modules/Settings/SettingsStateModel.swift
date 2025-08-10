@@ -5,10 +5,13 @@ extension Settings {
         @Injected() private var broadcaster: Broadcaster!
         @Injected() private var fileManager: FileManager!
         @Injected() private var nightscoutManager: NightscoutManager!
+        @Injected() var pluginManager: PluginManager!
 
         @Published var closedLoop = false
         @Published var debugOptions = false
         @Published var animatedBackground = false
+        @Published var serviceUIType: ServiceUI.Type?
+        @Published var setupTidepool = false
         @Published var disableCGMError = true
         @Published var profileID: String = "Hypo Treatment"
         @Published var allowDilution = false
@@ -58,6 +61,7 @@ extension Settings {
             copyrightNotice = Bundle.main.infoDictionary?["NSHumanReadableCopyright"] as? String ?? ""
 
             subscribeSetting(\.animatedBackground, on: $animatedBackground) { animatedBackground = $0 }
+            serviceUIType = pluginManager.getServiceTypeByIdentifier("TidepoolService")
         }
 
         func logItems() -> [URL] {
@@ -93,7 +97,24 @@ extension Settings.StateModel: SettingsObserver {
     func settingsDidChange(_ settings: FreeAPSSettings) {
         closedLoop = settings.closedLoop
         debugOptions = settings.debugOptions
-        disableCGMError = settings.disableCGMError
-        allowDilution = settings.allowDilution
+    }
+}
+
+extension Settings.StateModel: ServiceOnboardingDelegate {
+    func serviceOnboarding(didCreateService service: Service) {
+        debug(.nightscout, "Service with identifier \(service.pluginIdentifier) created")
+        provider.tidepoolManager.addTidepoolService(service: service)
+    }
+
+    func serviceOnboarding(didOnboardService service: Service) {
+        precondition(service.isOnboarded)
+        debug(.nightscout, "Service with identifier \(service.pluginIdentifier) onboarded")
+    }
+}
+
+extension Settings.StateModel: CompletionDelegate {
+    func completionNotifyingDidComplete(_: CompletionNotifying) {
+        setupTidepool = false
+        provider.tidepoolManager.forceUploadData(device: fetchCgmManager.cgmManager?.cgmManagerStatus.device)
     }
 }

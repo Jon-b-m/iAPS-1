@@ -47,6 +47,7 @@ import Swinject
         _ = resolver.resolve(HealthKitManager.self)!
         _ = resolver.resolve(BluetoothStateManager.self)!
         _ = resolver.resolve(LiveActivityBridge.self)!
+        _ = resolver.resolve(PluginManager.self)!
     }
 
     init() {

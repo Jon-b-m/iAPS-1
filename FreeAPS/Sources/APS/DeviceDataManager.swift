@@ -40,16 +40,12 @@ private let staticPumpManagers: [PumpManagerUI.Type] = [
 ]
 
 private let staticPumpManagersByIdentifier: [String: PumpManagerUI.Type] = [
-    MinimedPumpManager.managerIdentifier: MinimedPumpManager.self,
-    OmnipodPumpManager.managerIdentifier: OmnipodPumpManager.self,
-    OmniBLEPumpManager.managerIdentifier: OmniBLEPumpManager.self,
+    MinimedPumpManager.pluginIdentifier: MinimedPumpManager.self,
+    OmnipodPumpManager.pluginIdentifier: OmnipodPumpManager.self,
+    OmniBLEPumpManager.pluginIdentifier: OmniBLEPumpManager.self,
     DanaKitPumpManager.managerIdentifier: DanaKitPumpManager.self,
-    MockPumpManager.managerIdentifier: MockPumpManager.self
+    MockPumpManager.pluginIdentifier: MockPumpManager.self
 ]
-
-// private let staticPumpManagersByIdentifier: [String: PumpManagerUI.Type] = staticPumpManagers.reduce(into: [:]) { map, Type in
-//    map[Type.managerIdentifier] = Type
-// }
 
 private let accessLock = NSRecursiveLock(label: "BaseDeviceDataManager.accessLock")
 

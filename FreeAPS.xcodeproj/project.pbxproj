@@ -82,6 +82,12 @@
 		19A910382A24EF3200C8951B /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A910372A24EF3200C8951B /* ChartsView.swift */; };
 		19AEF4322B1F5A98006FFE8B /* TIRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AEF4312B1F5A98006FFE8B /* TIRView.swift */; };
 		19B0EF2128F6D66200069496 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B0EF2028F6D66200069496 /* Statistics.swift */; };
+		19B356622E4920CA002F301A /* PluginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B356612E4920C4002F301A /* PluginManager.swift */; };
+		19B356642E492107002F301A /* PluginSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B356632E492100002F301A /* PluginSource.swift */; };
+		19B356672E49225E002F301A /* OluginManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B356662E492245002F301A /* OluginManagerTests.swift */; };
+		19B356692E492444002F301A /* TidePoolManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B356682E492437002F301A /* TidePoolManager.swift */; };
+		19B3566B2E49249A002F301A /* TidePoolConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B3566A2E492490002F301A /* TidePoolConfigView.swift */; };
+		19B3566D2E4928FD002F301A /* TidePoolStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B3566C2E4928F5002F301A /* TidePoolStartView.swift */; };
 		19CE0E592DD9F30D0050FC89 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CE0E582DD9F3060050FC89 /* Configuration.swift */; };
 		19D466A329AA2B80004D5F33 /* FPUConfigDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D466A229AA2B80004D5F33 /* FPUConfigDataFlow.swift */; };
 		19D466A529AA2BD4004D5F33 /* FPUConfigProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D466A429AA2BD4004D5F33 /* FPUConfigProvider.swift */; };
@@ -495,6 +501,293 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		19B3559B2E492071002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C72E49202500B5DAE6 /* LoopKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 430157F71C7EC03B00B64B63;
+			remoteInfo = "LoopKit Example";
+		};
+		19B3559D2E492071002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C72E49202500B5DAE6 /* LoopKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 43D8FDCB1C728FDF0073BE78;
+			remoteInfo = LoopKit;
+		};
+		19B3559F2E492071002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C72E49202500B5DAE6 /* LoopKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A9E675F022713F4700E25293;
+			remoteInfo = "LoopKit-watchOS";
+		};
+		19B355A12E492071002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C72E49202500B5DAE6 /* LoopKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 43D8FDD51C728FDF0073BE78;
+			remoteInfo = LoopKitTests;
+		};
+		19B355A32E492071002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C72E49202500B5DAE6 /* LoopKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1DEE230124A676A300693C32;
+			remoteInfo = LoopKitHostedTests;
+		};
+		19B355A52E492071002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C72E49202500B5DAE6 /* LoopKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 43BA7154201E484D0058961E;
+			remoteInfo = LoopKitUI;
+		};
+		19B355A72E492071002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C72E49202500B5DAE6 /* LoopKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 89D2047221CC7BD7001238CC;
+			remoteInfo = MockKit;
+		};
+		19B355A92E492071002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C72E49202500B5DAE6 /* LoopKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B4CEE2E0257129780093111B;
+			remoteInfo = MockKitTests;
+		};
+		19B355AB2E492071002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C72E49202500B5DAE6 /* LoopKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 89D2048F21CC7C12001238CC;
+			remoteInfo = MockKitUI;
+		};
+		19B355AD2E492071002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C72E49202500B5DAE6 /* LoopKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 892A5D34222F03CB008961AB;
+			remoteInfo = LoopTestingKit;
+		};
+		19B355B42E492071002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584AF2E491FE800B5DAE6 /* RileyLinkKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C12EA237198B436800309FA4;
+			remoteInfo = RileyLink;
+		};
+		19B355B62E492071002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584AF2E491FE800B5DAE6 /* RileyLinkKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 431CE76F1F98564100255374;
+			remoteInfo = RileyLinkBLEKit;
+		};
+		19B355B82E492071002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584AF2E491FE800B5DAE6 /* RileyLinkKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 431CE7771F98564200255374;
+			remoteInfo = RileyLinkBLEKitTests;
+		};
+		19B355BA2E492071002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584AF2E491FE800B5DAE6 /* RileyLinkKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 43722FAE1CB9F7630038B7F2;
+			remoteInfo = RileyLinkKit;
+		};
+		19B355BC2E492071002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584AF2E491FE800B5DAE6 /* RileyLinkKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 43D5E78E1FAF7BFB004ACDB7;
+			remoteInfo = RileyLinkKitUI;
+		};
+		19B355C52E492072002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1935849A2E491B6F00B5DAE6 /* TidepoolService.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A9DAACFF22E7987800E76C9F;
+			remoteInfo = TidepoolServiceKit;
+		};
+		19B355C72E492072002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1935849A2E491B6F00B5DAE6 /* TidepoolService.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A9DAAD0722E7987800E76C9F;
+			remoteInfo = TidepoolServiceKitTests;
+		};
+		19B355C92E492072002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1935849A2E491B6F00B5DAE6 /* TidepoolService.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A9DAAD1B22E7988900E76C9F;
+			remoteInfo = TidepoolServiceKitUI;
+		};
+		19B355CB2E492072002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1935849A2E491B6F00B5DAE6 /* TidepoolService.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A9DAAD2322E7988900E76C9F;
+			remoteInfo = TidepoolServiceKitUITests;
+		};
+		19B355CD2E492072002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1935849A2E491B6F00B5DAE6 /* TidepoolService.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A94AE4E4235A89B5005CA320;
+			remoteInfo = TidepoolServiceKitPlugin;
+		};
+		19B355E72E492072002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C42E49202500B5DAE6 /* OmniKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C124016C29C7D87A00B32844;
+			remoteInfo = OmniKit;
+		};
+		19B355E92E492072002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C42E49202500B5DAE6 /* OmniKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C124020B29C7D92700B32844;
+			remoteInfo = OmniKitUI;
+		};
+		19B355EB2E492072002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C42E49202500B5DAE6 /* OmniKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C124021729C7D93D00B32844;
+			remoteInfo = OmniKitPlugin;
+		};
+		19B355ED2E492072002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C42E49202500B5DAE6 /* OmniKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C12ED9CA29C7DBA900435701;
+			remoteInfo = OmniKitTests;
+		};
+		19B355EF2E492072002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C42E49202500B5DAE6 /* OmniKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C1229C6B29C7F0840066A89C;
+			remoteInfo = OmniKitPacketParser;
+		};
+		19B356052E492072002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C92E49202500B5DAE6 /* ShareClient.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 432B0E881CDFC3C50045347B;
+			remoteInfo = ShareClient;
+		};
+		19B356072E492072002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C92E49202500B5DAE6 /* ShareClient.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A9ED4DA4225EB4D30080DEBA;
+			remoteInfo = "ShareClient-watchOS";
+		};
+		19B356092E492072002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C92E49202500B5DAE6 /* ShareClient.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 43A8EC82210E664300A81379;
+			remoteInfo = ShareClientUI;
+		};
+		19B3560B2E492072002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C92E49202500B5DAE6 /* ShareClient.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B40BF25E23ABD47400A43CEE;
+			remoteInfo = ShareClientPlugin;
+		};
+		19B356212E492072002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C52E49202500B5DAE6 /* OmniBLE.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 84752E8226ED0FFE009FD801;
+			remoteInfo = OmniBLE;
+		};
+		19B356232E492072002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C52E49202500B5DAE6 /* OmniBLE.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 84752E8B26ED0FFE009FD801;
+			remoteInfo = OmniBLETests;
+		};
+		19B356252E492072002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C52E49202500B5DAE6 /* OmniBLE.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C187C197279086A8006E3557;
+			remoteInfo = OmniBLEPlugin;
+		};
+		19B356272E492072002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C52E49202500B5DAE6 /* OmniBLE.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D8C72BD92A50D7D700268D82;
+			remoteInfo = OmniBLEParser;
+		};
+		19B3564D2E492072002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C82E49202500B5DAE6 /* LibreTransmitter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 432B0E881CDFC3C50045347B;
+			remoteInfo = LibreTransmitter;
+		};
+		19B3564F2E492072002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C82E49202500B5DAE6 /* LibreTransmitter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 43A8EC82210E664300A81379;
+			remoteInfo = LibreTransmitterUI;
+		};
+		19B356512E492072002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C82E49202500B5DAE6 /* LibreTransmitter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B40BF25E23ABD47400A43CEE;
+			remoteInfo = LibreTransmitterPlugin;
+		};
+		19B356532E492072002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C82E49202500B5DAE6 /* LibreTransmitter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C1BDBAFA2A4397E200A787D1;
+			remoteInfo = LibreDemoPlugin;
+		};
+		19B356592E492072002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C62E49202500B5DAE6 /* MinimedKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C1E3491129C7A866009A50A5;
+			remoteInfo = MinimedKit;
+		};
+		19B3565B2E492072002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C62E49202500B5DAE6 /* MinimedKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C1E34B0129C7ABCB009A50A5;
+			remoteInfo = MinimedKitUI;
+		};
+		19B3565D2E492072002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C62E49202500B5DAE6 /* MinimedKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C1E34B5B29C7AD01009A50A5;
+			remoteInfo = MinimedKitPlugin;
+		};
+		19B3565F2E492072002F301A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 193584C62E49202500B5DAE6 /* MinimedKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C13CC34129C7B73A007F25DE;
+			remoteInfo = MinimedKitTests;
+		};
 		38E8752627554D5700975559 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 388E595025AD948C0019842D /* Project object */;
@@ -642,6 +935,14 @@
 		192A9A112C0F5361000BBC29 /* MealsShortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsShortcuts.swift; sourceTree = "<group>"; };
 		193339762E05BC7700E80EF5 /* DynamicHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHistoryView.swift; sourceTree = "<group>"; };
 		1935363F28496F7D001E0B16 /* Dynamic structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dynamic structs.swift"; sourceTree = "<group>"; };
+		1935849A2E491B6F00B5DAE6 /* TidepoolService.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TidepoolService.xcodeproj; path = TidepoolService/TidepoolService.xcodeproj; sourceTree = "<group>"; };
+		193584AF2E491FE800B5DAE6 /* RileyLinkKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RileyLinkKit.xcodeproj; path = RileyLinkKit/RileyLinkKit.xcodeproj; sourceTree = "<group>"; };
+		193584C42E49202500B5DAE6 /* OmniKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OmniKit.xcodeproj; path = OmniKit/OmniKit.xcodeproj; sourceTree = "<group>"; };
+		193584C52E49202500B5DAE6 /* OmniBLE.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OmniBLE.xcodeproj; path = OmniBLE/OmniBLE.xcodeproj; sourceTree = "<group>"; };
+		193584C62E49202500B5DAE6 /* MinimedKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MinimedKit.xcodeproj; path = MinimedKit/MinimedKit.xcodeproj; sourceTree = "<group>"; };
+		193584C72E49202500B5DAE6 /* LoopKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LoopKit.xcodeproj; path = LoopKit/LoopKit.xcodeproj; sourceTree = "<group>"; };
+		193584C82E49202500B5DAE6 /* LibreTransmitter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LibreTransmitter.xcodeproj; path = LibreTransmitter/LibreTransmitter.xcodeproj; sourceTree = "<group>"; };
+		193584C92E49202500B5DAE6 /* ShareClient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShareClient.xcodeproj; path = "dexcom-share-client-swift/ShareClient.xcodeproj"; sourceTree = "<group>"; };
 		19389E542D69393900636E49 /* TemporaryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporaryData.swift; sourceTree = "<group>"; };
 		193CA2D92E1E72A500DF9998 /* WebViewScriptExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewScriptExecutor.swift; sourceTree = "<group>"; };
 		193CA2DB2E1E742C00DF9998 /* FunctionScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionScript.swift; sourceTree = "<group>"; };
@@ -746,6 +1047,12 @@
 		19A910372A24EF3200C8951B /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
 		19AEF4312B1F5A98006FFE8B /* TIRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIRView.swift; sourceTree = "<group>"; };
 		19B0EF2028F6D66200069496 /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
+		19B356612E4920C4002F301A /* PluginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluginManager.swift; sourceTree = "<group>"; };
+		19B356632E492100002F301A /* PluginSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluginSource.swift; sourceTree = "<group>"; };
+		19B356662E492245002F301A /* OluginManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OluginManagerTests.swift; sourceTree = "<group>"; };
+		19B356682E492437002F301A /* TidePoolManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TidePoolManager.swift; sourceTree = "<group>"; };
+		19B3566A2E492490002F301A /* TidePoolConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TidePoolConfigView.swift; sourceTree = "<group>"; };
+		19B3566C2E4928F5002F301A /* TidePoolStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TidePoolStartView.swift; sourceTree = "<group>"; };
 		19C166682756EFBD00ED12E3 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		19C166692756EFBD00ED12E3 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		19CE0E582DD9F3060050FC89 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
@@ -1432,6 +1739,111 @@
 			path = AutoISF;
 			sourceTree = "<group>";
 		};
+		19B3558D2E492071002F301A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19B355B52E492071002F301A /* RileyLink.app */,
+				19B355B72E492071002F301A /* RileyLinkBLEKit.framework */,
+				19B355B92E492071002F301A /* RileyLinkBLEKitTests.xctest */,
+				19B355BB2E492071002F301A /* RileyLinkKit.framework */,
+				19B355BD2E492071002F301A /* RileyLinkKitUI.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19B3558F2E492071002F301A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19B3559C2E492071002F301A /* LoopKit Example.app */,
+				19B3559E2E492071002F301A /* LoopKit.framework */,
+				19B355A02E492071002F301A /* LoopKit.framework */,
+				19B355A22E492071002F301A /* LoopKitTests.xctest */,
+				19B355A42E492071002F301A /* LoopKitHostedTests.xctest */,
+				19B355A62E492071002F301A /* LoopKitUI.framework */,
+				19B355A82E492071002F301A /* MockKit.framework */,
+				19B355AA2E492071002F301A /* MockKitTests.xctest */,
+				19B355AC2E492071002F301A /* MockKitUI.framework */,
+				19B355AE2E492071002F301A /* LoopTestingKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19B355BE2E492071002F301A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19B355C62E492072002F301A /* TidepoolServiceKit.framework */,
+				19B355C82E492072002F301A /* TidepoolServiceKitTests.xctest */,
+				19B355CA2E492072002F301A /* TidepoolServiceKitUI.framework */,
+				19B355CC2E492072002F301A /* TidepoolServiceKitUITests.xctest */,
+				19B355CE2E492072002F301A /* TidepoolServiceKitPlugin.loopplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19B355D12E492072002F301A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19B355E82E492072002F301A /* OmniKit.framework */,
+				19B355EA2E492072002F301A /* OmniKitUI.framework */,
+				19B355EC2E492072002F301A /* OmniKitPlugin.loopplugin */,
+				19B355EE2E492072002F301A /* OmniKitTests.xctest */,
+				19B355F02E492072002F301A /* OmniKitPacketParser */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19B355F32E492072002F301A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19B356062E492072002F301A /* ShareClient.framework */,
+				19B356082E492072002F301A /* ShareClient.framework */,
+				19B3560A2E492072002F301A /* ShareClientUI.framework */,
+				19B3560C2E492072002F301A /* ShareClientPlugin.loopplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19B3560F2E492072002F301A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19B356222E492072002F301A /* OmniBLE.framework */,
+				19B356242E492072002F301A /* OmniBLETests.xctest */,
+				19B356262E492072002F301A /* OmniBLEPlugin.loopplugin */,
+				19B356282E492072002F301A /* OmniBLEParser */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19B3562B2E492072002F301A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19B3564E2E492072002F301A /* LibreTransmitter.framework */,
+				19B356502E492072002F301A /* LibreTransmitterUI.framework */,
+				19B356522E492072002F301A /* LibreTransmitterPlugin.loopplugin */,
+				19B356542E492072002F301A /* LibreDemoPlugin.loopplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19B3562F2E492072002F301A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19B3565A2E492072002F301A /* MinimedKit.framework */,
+				19B3565C2E492072002F301A /* MinimedKitUI.framework */,
+				19B3565E2E492072002F301A /* MinimedKitPlugin.loopplugin */,
+				19B356602E492072002F301A /* MinimedKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19B356652E49223A002F301A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				19B356662E492245002F301A /* OluginManagerTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		19D440A926B6FEBD008DA6C8 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -1630,6 +2042,7 @@
 		3811DE1325C9D39E00A708ED /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				19B356652E49223A002F301A /* Tests */,
 				38DF178A27733E0F00B3528F /* AnimatedBackground */,
 				3811DEDE25C9E2DD00A708ED /* Application */,
 				3811DF0A25CAAAA500A708ED /* APS */,
@@ -1712,6 +2125,8 @@
 		3811DE3B25C9D4A100A708ED /* View */ = {
 			isa = PBXGroup;
 			children = (
+				19B3566C2E4928F5002F301A /* TidePoolStartView.swift */,
+				19B3566A2E492490002F301A /* TidePoolConfigView.swift */,
 				3811DE3C25C9D4A100A708ED /* SettingsRootView.swift */,
 			);
 			path = View;
@@ -1748,6 +2163,7 @@
 		3811DE9425C9D88200A708ED /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				19B356682E492437002F301A /* TidePoolManager.swift */,
 				38E44521274E3DDC00EC9A94 /* NetworkReachabilityManager.swift */,
 				38192E03261B82FA0094D973 /* ReachabilityManager.swift */,
 				3811DE9625C9D88300A708ED /* HTTPResponseStatus.swift */,
@@ -1835,6 +2251,7 @@
 		3811DF0A25CAAAA500A708ED /* APS */ = {
 			isa = PBXGroup;
 			children = (
+				19B356612E4920C4002F301A /* PluginManager.swift */,
 				3811DF0F25CAAAE200A708ED /* APSManager.swift */,
 				38BF021E25E7F0DE00579895 /* DeviceDataManager.swift */,
 				38A43597262E0E4900E80935 /* FetchAnnouncementsManager.swift */,
@@ -1918,6 +2335,7 @@
 		3856933F270B57A00002C50D /* CGM */ = {
 			isa = PBXGroup;
 			children = (
+				19B356632E492100002F301A /* PluginSource.swift */,
 				CE398D15297C9D1D00DF218F /* dexcomSourceG7.swift */,
 				F816825F28DB441800054060 /* BluetoothTransmitter.swift */,
 				F816825D28DB441200054060 /* HeartBeatManager.swift */,
@@ -1978,8 +2396,16 @@
 				38E8752827554D5700975559 /* FreeAPSWatch WatchKit Extension */,
 				6B1A8D1C2B14D91600E76752 /* LiveActivity */,
 				388E595925AD948C0019842D /* Products */,
-				3818AA48274C267000843DB3 /* Frameworks */,
 				192F0FF5276AC36D0085BE4D /* Recovered References */,
+				3818AA48274C267000843DB3 /* Frameworks */,
+				193584AF2E491FE800B5DAE6 /* RileyLinkKit.xcodeproj */,
+				193584C42E49202500B5DAE6 /* OmniKit.xcodeproj */,
+				193584C52E49202500B5DAE6 /* OmniBLE.xcodeproj */,
+				193584C62E49202500B5DAE6 /* MinimedKit.xcodeproj */,
+				193584C72E49202500B5DAE6 /* LoopKit.xcodeproj */,
+				193584C82E49202500B5DAE6 /* LibreTransmitter.xcodeproj */,
+				193584C92E49202500B5DAE6 /* ShareClient.xcodeproj */,
+				1935849A2E491B6F00B5DAE6 /* TidepoolService.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2975,6 +3401,8 @@
 				sk,
 				hu,
 				vi,
+				ja,
+				ro,
 			);
 			mainGroup = 388E594F25AD948C0019842D;
 			packageReferences = (
@@ -2987,6 +3415,40 @@
 			);
 			productRefGroup = 388E595925AD948C0019842D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 19B3562B2E492072002F301A /* Products */;
+					ProjectRef = 193584C82E49202500B5DAE6 /* LibreTransmitter.xcodeproj */;
+				},
+				{
+					ProductGroup = 19B3558F2E492071002F301A /* Products */;
+					ProjectRef = 193584C72E49202500B5DAE6 /* LoopKit.xcodeproj */;
+				},
+				{
+					ProductGroup = 19B3562F2E492072002F301A /* Products */;
+					ProjectRef = 193584C62E49202500B5DAE6 /* MinimedKit.xcodeproj */;
+				},
+				{
+					ProductGroup = 19B3560F2E492072002F301A /* Products */;
+					ProjectRef = 193584C52E49202500B5DAE6 /* OmniBLE.xcodeproj */;
+				},
+				{
+					ProductGroup = 19B355D12E492072002F301A /* Products */;
+					ProjectRef = 193584C42E49202500B5DAE6 /* OmniKit.xcodeproj */;
+				},
+				{
+					ProductGroup = 19B3558D2E492071002F301A /* Products */;
+					ProjectRef = 193584AF2E491FE800B5DAE6 /* RileyLinkKit.xcodeproj */;
+				},
+				{
+					ProductGroup = 19B355F32E492072002F301A /* Products */;
+					ProjectRef = 193584C92E49202500B5DAE6 /* ShareClient.xcodeproj */;
+				},
+				{
+					ProductGroup = 19B355BE2E492071002F301A /* Products */;
+					ProjectRef = 1935849A2E491B6F00B5DAE6 /* TidepoolService.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				388E595725AD948C0019842D /* FreeAPS */,
@@ -2997,6 +3459,296 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		19B3559C2E492071002F301A /* LoopKit Example.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "LoopKit Example.app";
+			remoteRef = 19B3559B2E492071002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B3559E2E492071002F301A /* LoopKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LoopKit.framework;
+			remoteRef = 19B3559D2E492071002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B355A02E492071002F301A /* LoopKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LoopKit.framework;
+			remoteRef = 19B3559F2E492071002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B355A22E492071002F301A /* LoopKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = LoopKitTests.xctest;
+			remoteRef = 19B355A12E492071002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B355A42E492071002F301A /* LoopKitHostedTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = LoopKitHostedTests.xctest;
+			remoteRef = 19B355A32E492071002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B355A62E492071002F301A /* LoopKitUI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LoopKitUI.framework;
+			remoteRef = 19B355A52E492071002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B355A82E492071002F301A /* MockKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MockKit.framework;
+			remoteRef = 19B355A72E492071002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B355AA2E492071002F301A /* MockKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MockKitTests.xctest;
+			remoteRef = 19B355A92E492071002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B355AC2E492071002F301A /* MockKitUI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MockKitUI.framework;
+			remoteRef = 19B355AB2E492071002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B355AE2E492071002F301A /* LoopTestingKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LoopTestingKit.framework;
+			remoteRef = 19B355AD2E492071002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B355B52E492071002F301A /* RileyLink.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = RileyLink.app;
+			remoteRef = 19B355B42E492071002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B355B72E492071002F301A /* RileyLinkBLEKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RileyLinkBLEKit.framework;
+			remoteRef = 19B355B62E492071002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B355B92E492071002F301A /* RileyLinkBLEKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RileyLinkBLEKitTests.xctest;
+			remoteRef = 19B355B82E492071002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B355BB2E492071002F301A /* RileyLinkKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RileyLinkKit.framework;
+			remoteRef = 19B355BA2E492071002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B355BD2E492071002F301A /* RileyLinkKitUI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RileyLinkKitUI.framework;
+			remoteRef = 19B355BC2E492071002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B355C62E492072002F301A /* TidepoolServiceKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TidepoolServiceKit.framework;
+			remoteRef = 19B355C52E492072002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B355C82E492072002F301A /* TidepoolServiceKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TidepoolServiceKitTests.xctest;
+			remoteRef = 19B355C72E492072002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B355CA2E492072002F301A /* TidepoolServiceKitUI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TidepoolServiceKitUI.framework;
+			remoteRef = 19B355C92E492072002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B355CC2E492072002F301A /* TidepoolServiceKitUITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TidepoolServiceKitUITests.xctest;
+			remoteRef = 19B355CB2E492072002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B355CE2E492072002F301A /* TidepoolServiceKitPlugin.loopplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TidepoolServiceKitPlugin.loopplugin;
+			remoteRef = 19B355CD2E492072002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B355E82E492072002F301A /* OmniKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OmniKit.framework;
+			remoteRef = 19B355E72E492072002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B355EA2E492072002F301A /* OmniKitUI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OmniKitUI.framework;
+			remoteRef = 19B355E92E492072002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B355EC2E492072002F301A /* OmniKitPlugin.loopplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OmniKitPlugin.loopplugin;
+			remoteRef = 19B355EB2E492072002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B355EE2E492072002F301A /* OmniKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OmniKitTests.xctest;
+			remoteRef = 19B355ED2E492072002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B355F02E492072002F301A /* OmniKitPacketParser */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = OmniKitPacketParser;
+			remoteRef = 19B355EF2E492072002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B356062E492072002F301A /* ShareClient.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ShareClient.framework;
+			remoteRef = 19B356052E492072002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B356082E492072002F301A /* ShareClient.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ShareClient.framework;
+			remoteRef = 19B356072E492072002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B3560A2E492072002F301A /* ShareClientUI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ShareClientUI.framework;
+			remoteRef = 19B356092E492072002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B3560C2E492072002F301A /* ShareClientPlugin.loopplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ShareClientPlugin.loopplugin;
+			remoteRef = 19B3560B2E492072002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B356222E492072002F301A /* OmniBLE.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OmniBLE.framework;
+			remoteRef = 19B356212E492072002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B356242E492072002F301A /* OmniBLETests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OmniBLETests.xctest;
+			remoteRef = 19B356232E492072002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B356262E492072002F301A /* OmniBLEPlugin.loopplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OmniBLEPlugin.loopplugin;
+			remoteRef = 19B356252E492072002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B356282E492072002F301A /* OmniBLEParser */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = OmniBLEParser;
+			remoteRef = 19B356272E492072002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B3564E2E492072002F301A /* LibreTransmitter.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LibreTransmitter.framework;
+			remoteRef = 19B3564D2E492072002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B356502E492072002F301A /* LibreTransmitterUI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LibreTransmitterUI.framework;
+			remoteRef = 19B3564F2E492072002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B356522E492072002F301A /* LibreTransmitterPlugin.loopplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = LibreTransmitterPlugin.loopplugin;
+			remoteRef = 19B356512E492072002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B356542E492072002F301A /* LibreDemoPlugin.loopplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = LibreDemoPlugin.loopplugin;
+			remoteRef = 19B356532E492072002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B3565A2E492072002F301A /* MinimedKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MinimedKit.framework;
+			remoteRef = 19B356592E492072002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B3565C2E492072002F301A /* MinimedKitUI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MinimedKitUI.framework;
+			remoteRef = 19B3565B2E492072002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B3565E2E492072002F301A /* MinimedKitPlugin.loopplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MinimedKitPlugin.loopplugin;
+			remoteRef = 19B3565D2E492072002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B356602E492072002F301A /* MinimedKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MinimedKitTests.xctest;
+			remoteRef = 19B3565F2E492072002F301A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		388E595625AD948C0019842D /* Resources */ = {
@@ -3117,6 +3869,7 @@
 				38D0B3B625EBE24900CB6E88 /* Battery.swift in Sources */,
 				38C4D33725E9A1A300D30B77 /* DispatchQueue+Extensions.swift in Sources */,
 				F90692CF274B999A0037068D /* HealthKitDataFlow.swift in Sources */,
+				19B356672E49225E002F301A /* OluginManagerTests.swift in Sources */,
 				CE7CA3552A064973004BE681 /* ListStateIntent.swift in Sources */,
 				190141362CDB9D4B00ABD925 /* Token.swift in Sources */,
 				19F191DE2BE4F97F00F6297E /* SharingProvider.swift in Sources */,
@@ -3164,6 +3917,7 @@
 				19D466A529AA2BD4004D5F33 /* FPUConfigProvider.swift in Sources */,
 				194D7E6E2B974F9F007A38C1 /* LoopsView.swift in Sources */,
 				383948D625CD4D8900E91849 /* FileStorage.swift in Sources */,
+				19B356692E492444002F301A /* TidePoolManager.swift in Sources */,
 				3811DE4125C9D4A100A708ED /* SettingsRootView.swift in Sources */,
 				38192E04261B82FA0094D973 /* ReachabilityManager.swift in Sources */,
 				38E44539274E411700EC9A94 /* Disk+UIImage.swift in Sources */,
@@ -3171,6 +3925,7 @@
 				191A9D182BED24B000028D48 /* ActiveIOBView.swift in Sources */,
 				38FEF3FC2737E53800574A46 /* MainStateModel.swift in Sources */,
 				F2159A542BA6207F00A0B716 /* ContactTrickEntry.swift in Sources */,
+				19B3566D2E4928FD002F301A /* TidePoolStartView.swift in Sources */,
 				38569348270B5DFB0002C50D /* GlucoseSource.swift in Sources */,
 				CEB434E328B8F9DB00B70274 /* BluetoothStateManager.swift in Sources */,
 				3811DE4225C9D4A100A708ED /* SettingsDataFlow.swift in Sources */,
@@ -3277,6 +4032,7 @@
 				3811DEB025C9D88300A708ED /* BaseKeychain.swift in Sources */,
 				F2159A5B2BA7939C00A0B716 /* ContactPicture.swift in Sources */,
 				3811DE4325C9D4A100A708ED /* SettingsProvider.swift in Sources */,
+				19B356622E4920CA002F301A /* PluginManager.swift in Sources */,
 				45252C95D220E796FDB3B022 /* ConfigEditorDataFlow.swift in Sources */,
 				3871F38725ED661C0013ECB5 /* Suggestion.swift in Sources */,
 				CE7CA34E2A064973004BE681 /* AppShortcuts.swift in Sources */,
@@ -3289,6 +4045,7 @@
 				19DC677F29CA675700FD9EC4 /* OverrideProfilesDataFlow.swift in Sources */,
 				1935364028496F7D001E0B16 /* Dynamic structs.swift in Sources */,
 				F2159A522BA60F7A00A0B716 /* FontWeight.swift in Sources */,
+				19B3566B2E49249A002F301A /* TidePoolConfigView.swift in Sources */,
 				CE2FAD3A297D93F0001A872C /* BloodGlucoseExtensions.swift in Sources */,
 				38E4453A274E411700EC9A94 /* Disk+[UIImage].swift in Sources */,
 				72F1BD388F42FCA6C52E4500 /* ConfigEditorProvider.swift in Sources */,
@@ -3370,6 +4127,7 @@
 				98641AF4F92123DA668AB931 /* CREditorRootView.swift in Sources */,
 				38E4453D274E411700EC9A94 /* Disk+Errors.swift in Sources */,
 				198F67B52CFCBD5D00E538CB /* AutoISFRootView.swift in Sources */,
+				19B356642E492107002F301A /* PluginSource.swift in Sources */,
 				38E98A2325F52C9300C0CED0 /* Signpost.swift in Sources */,
 				CE7CA3542A064973004BE681 /* TempPresetsIntentRequest.swift in Sources */,
 				F5F7E6C1B7F098F59EB67EC5 /* TargetsEditorDataFlow.swift in Sources */,

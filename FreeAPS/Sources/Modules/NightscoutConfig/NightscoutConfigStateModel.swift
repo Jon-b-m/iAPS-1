@@ -25,6 +25,7 @@ extension NightscoutConfig {
         @Published var backfilling = false
         @Published var isUploadEnabled = false // Allow uploads
         @Published var uploadGlucose = true // Upload Glucose
+        @Published var changeUploadGlucose = true
         @Published var useLocalSource = false
         @Published var localPort: Decimal = 0
         @Published var units: GlucoseUnits = .mmolL
@@ -40,6 +41,7 @@ extension NightscoutConfig {
             dia = settingsManager.pumpSettings.insulinActionCurve
             maxBasal = settingsManager.pumpSettings.maxBasal
             maxBolus = settingsManager.pumpSettings.maxBolus
+            changeUploadGlucose = (cgmManager.cgmGlucoseSourceType != CGMType.plugin)
 
             subscribeSetting(\.allowAnnouncements, on: $allowAnnouncements) { allowAnnouncements = $0 }
             subscribeSetting(\.isUploadEnabled, on: $isUploadEnabled) { isUploadEnabled = $0 }

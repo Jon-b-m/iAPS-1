@@ -1,0 +1,41 @@
+import LoopKitUI
+import ShareClient
+
+extension ShareService: ServiceAuthenticationUI {
+    public var credentialFormFieldHelperMessage: String? {
+        nil
+    }
+
+    public var credentialFormFields: [ServiceCredential] {
+        [
+            ServiceCredential(
+                title: LocalizedString("Username", comment: "The title of the Dexcom share username credential"),
+                isSecret: false,
+                keyboardType: .asciiCapable
+            ),
+            ServiceCredential(
+                title: LocalizedString("Password", comment: "The title of the Dexcom share password credential"),
+                isSecret: true,
+                keyboardType: .asciiCapable
+            ),
+            ServiceCredential(
+                title: LocalizedString("Server", comment: "The title of the Dexcom share server URL credential"),
+                isSecret: false,
+                options: [
+                    (
+                        title: LocalizedString("US", comment: "U.S. share server option title"),
+                        value: KnownShareServers.US.rawValue
+                    ),
+                    (
+                        title: LocalizedString("APAC", comment: "Japan, Phillipines, Singapore share server option title"),
+                        value: KnownShareServers.APAC.rawValue
+                    ),
+                    (
+                        title: LocalizedString("Worldwide", comment: "Outside US and APAC share server option title"),
+                        value: KnownShareServers.Worldwide.rawValue
+                    )
+                ]
+            )
+        ]
+    }
+}
