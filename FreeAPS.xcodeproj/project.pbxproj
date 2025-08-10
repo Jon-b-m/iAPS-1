@@ -275,7 +275,6 @@
 		38E87401274F77E400975559 /* CoreNFC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E873FD274F761800975559 /* CoreNFC.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		38E87403274F78C000975559 /* libswiftCoreNFC.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E87402274F78C000975559 /* libswiftCoreNFC.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
 		38E87408274F9AD000975559 /* UserNotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E87407274F9AD000975559 /* UserNotificationsManager.swift */; };
-		38E8752527554D5700975559 /* FreeAPSWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 38E8752427554D5700975559 /* FreeAPSWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		38E8752A27554D5700975559 /* FreeAPSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E8752927554D5700975559 /* FreeAPSApp.swift */; };
 		38E8752C27554D5700975559 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E8752B27554D5700975559 /* MainView.swift */; };
 		38E8752E27554D5700975559 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E8752D27554D5700975559 /* NotificationController.swift */; };
@@ -399,8 +398,8 @@
 		CE398D1B297D69A900DF218F /* ShareClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE398D1A297D69A900DF218F /* ShareClient.framework */; };
 		CE48C86428CA69D5007C0598 /* OmniBLEPumpManagerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE48C86328CA69D5007C0598 /* OmniBLEPumpManagerExtensions.swift */; };
 		CE48C86628CA6B48007C0598 /* OmniPodManagerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE48C86528CA6B48007C0598 /* OmniPodManagerExtensions.swift */; };
-		CE51DD1C2A01970900F163F7 /* ConnectIQ 2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE51DD1B2A01970800F163F7 /* ConnectIQ 2.xcframework */; };
-		CE51DD1D2A01970900F163F7 /* ConnectIQ 2.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE51DD1B2A01970800F163F7 /* ConnectIQ 2.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE51DD1C2A01970900F163F7 /* ConnectIQ.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE51DD1B2A01970800F163F7 /* ConnectIQ.xcframework */; };
+		CE51DD1D2A01970900F163F7 /* ConnectIQ.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE51DD1B2A01970800F163F7 /* ConnectIQ.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE6B025728F350FF000C5502 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6B025628F350FF000C5502 /* HealthKit.framework */; };
 		CE7950242997D81700FA576E /* CGMSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7950232997D81700FA576E /* CGMSettingsView.swift */; };
 		CE7950262998056D00FA576E /* CGMSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7950252998056D00FA576E /* CGMSetupView.swift */; };
@@ -501,299 +500,376 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		19B3559B2E492071002F301A /* PBXContainerItemProxy */ = {
+		1956CEE52E49447B00A5BDAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 193584C72E49202500B5DAE6 /* LoopKit.xcodeproj */;
+			containerPortal = 1956CEDA2E49447B00A5BDAF /* CGMBLEKit.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 430157F71C7EC03B00B64B63;
-			remoteInfo = "LoopKit Example";
+			remoteGlobalIDString = 43CABDF31C3506F100005705;
+			remoteInfo = CGMBLEKit;
 		};
-		19B3559D2E492071002F301A /* PBXContainerItemProxy */ = {
+		1956CEE72E49447B00A5BDAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 193584C72E49202500B5DAE6 /* LoopKit.xcodeproj */;
+			containerPortal = 1956CEDA2E49447B00A5BDAF /* CGMBLEKit.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 43D8FDCB1C728FDF0073BE78;
-			remoteInfo = LoopKit;
+			remoteGlobalIDString = A9AD381E225EEE850058C179;
+			remoteInfo = "CGMBLEKit-watchOS";
 		};
-		19B3559F2E492071002F301A /* PBXContainerItemProxy */ = {
+		1956CEE92E49447B00A5BDAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 193584C72E49202500B5DAE6 /* LoopKit.xcodeproj */;
+			containerPortal = 1956CEDA2E49447B00A5BDAF /* CGMBLEKit.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = A9E675F022713F4700E25293;
-			remoteInfo = "LoopKit-watchOS";
+			remoteGlobalIDString = 43A8EC52210D0A7400A81379;
+			remoteInfo = CGMBLEKitUI;
 		};
-		19B355A12E492071002F301A /* PBXContainerItemProxy */ = {
+		1956CEEB2E49447B00A5BDAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 193584C72E49202500B5DAE6 /* LoopKit.xcodeproj */;
+			containerPortal = 1956CEDA2E49447B00A5BDAF /* CGMBLEKit.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 43D8FDD51C728FDF0073BE78;
-			remoteInfo = LoopKitTests;
+			remoteGlobalIDString = 43CABDFD1C3506F100005705;
+			remoteInfo = CGMBLEKitTests;
 		};
-		19B355A32E492071002F301A /* PBXContainerItemProxy */ = {
+		1956CEED2E49447B00A5BDAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 193584C72E49202500B5DAE6 /* LoopKit.xcodeproj */;
+			containerPortal = 1956CEDA2E49447B00A5BDAF /* CGMBLEKit.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 1DEE230124A676A300693C32;
-			remoteInfo = LoopKitHostedTests;
+			remoteGlobalIDString = 437AFEF72038EC43008C4892;
+			remoteInfo = "CGMBLEKit Example";
 		};
-		19B355A52E492071002F301A /* PBXContainerItemProxy */ = {
+		1956CEEF2E49447B00A5BDAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 193584C72E49202500B5DAE6 /* LoopKit.xcodeproj */;
+			containerPortal = 1956CEDA2E49447B00A5BDAF /* CGMBLEKit.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 43BA7154201E484D0058961E;
-			remoteInfo = LoopKitUI;
+			remoteGlobalIDString = 4308103320785FEA00B66384;
+			remoteInfo = ResetTransmitter;
 		};
-		19B355A72E492071002F301A /* PBXContainerItemProxy */ = {
+		1956CEF12E49447B00A5BDAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 193584C72E49202500B5DAE6 /* LoopKit.xcodeproj */;
+			containerPortal = 1956CEDA2E49447B00A5BDAF /* CGMBLEKit.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 89D2047221CC7BD7001238CC;
-			remoteInfo = MockKit;
+			remoteGlobalIDString = B4D40D3E23A428BC00D7ECB5;
+			remoteInfo = CGMBLEKitG5Plugin;
 		};
-		19B355A92E492071002F301A /* PBXContainerItemProxy */ = {
+		1956CEF32E49447B00A5BDAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 193584C72E49202500B5DAE6 /* LoopKit.xcodeproj */;
+			containerPortal = 1956CEDA2E49447B00A5BDAF /* CGMBLEKit.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = B4CEE2E0257129780093111B;
-			remoteInfo = MockKitTests;
+			remoteGlobalIDString = B4D40D2E23A3E91800D7ECB5;
+			remoteInfo = CGMBLEKitG6Plugin;
 		};
-		19B355AB2E492071002F301A /* PBXContainerItemProxy */ = {
+		1956CEFC2E49449300A5BDAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 193584C72E49202500B5DAE6 /* LoopKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 89D2048F21CC7C12001238CC;
-			remoteInfo = MockKitUI;
-		};
-		19B355AD2E492071002F301A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 193584C72E49202500B5DAE6 /* LoopKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 892A5D34222F03CB008961AB;
-			remoteInfo = LoopTestingKit;
-		};
-		19B355B42E492071002F301A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 193584AF2E491FE800B5DAE6 /* RileyLinkKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C12EA237198B436800309FA4;
-			remoteInfo = RileyLink;
-		};
-		19B355B62E492071002F301A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 193584AF2E491FE800B5DAE6 /* RileyLinkKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 431CE76F1F98564100255374;
-			remoteInfo = RileyLinkBLEKit;
-		};
-		19B355B82E492071002F301A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 193584AF2E491FE800B5DAE6 /* RileyLinkKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 431CE7771F98564200255374;
-			remoteInfo = RileyLinkBLEKitTests;
-		};
-		19B355BA2E492071002F301A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 193584AF2E491FE800B5DAE6 /* RileyLinkKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 43722FAE1CB9F7630038B7F2;
-			remoteInfo = RileyLinkKit;
-		};
-		19B355BC2E492071002F301A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 193584AF2E491FE800B5DAE6 /* RileyLinkKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 43D5E78E1FAF7BFB004ACDB7;
-			remoteInfo = RileyLinkKitUI;
-		};
-		19B355C52E492072002F301A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1935849A2E491B6F00B5DAE6 /* TidepoolService.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A9DAACFF22E7987800E76C9F;
-			remoteInfo = TidepoolServiceKit;
-		};
-		19B355C72E492072002F301A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1935849A2E491B6F00B5DAE6 /* TidepoolService.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A9DAAD0722E7987800E76C9F;
-			remoteInfo = TidepoolServiceKitTests;
-		};
-		19B355C92E492072002F301A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1935849A2E491B6F00B5DAE6 /* TidepoolService.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A9DAAD1B22E7988900E76C9F;
-			remoteInfo = TidepoolServiceKitUI;
-		};
-		19B355CB2E492072002F301A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1935849A2E491B6F00B5DAE6 /* TidepoolService.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A9DAAD2322E7988900E76C9F;
-			remoteInfo = TidepoolServiceKitUITests;
-		};
-		19B355CD2E492072002F301A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1935849A2E491B6F00B5DAE6 /* TidepoolService.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A94AE4E4235A89B5005CA320;
-			remoteInfo = TidepoolServiceKitPlugin;
-		};
-		19B355E72E492072002F301A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 193584C42E49202500B5DAE6 /* OmniKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C124016C29C7D87A00B32844;
-			remoteInfo = OmniKit;
-		};
-		19B355E92E492072002F301A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 193584C42E49202500B5DAE6 /* OmniKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C124020B29C7D92700B32844;
-			remoteInfo = OmniKitUI;
-		};
-		19B355EB2E492072002F301A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 193584C42E49202500B5DAE6 /* OmniKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C124021729C7D93D00B32844;
-			remoteInfo = OmniKitPlugin;
-		};
-		19B355ED2E492072002F301A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 193584C42E49202500B5DAE6 /* OmniKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C12ED9CA29C7DBA900435701;
-			remoteInfo = OmniKitTests;
-		};
-		19B355EF2E492072002F301A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 193584C42E49202500B5DAE6 /* OmniKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C1229C6B29C7F0840066A89C;
-			remoteInfo = OmniKitPacketParser;
-		};
-		19B356052E492072002F301A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 193584C92E49202500B5DAE6 /* ShareClient.xcodeproj */;
+			containerPortal = 1956CEF52E49449300A5BDAF /* ShareClient.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 432B0E881CDFC3C50045347B;
 			remoteInfo = ShareClient;
 		};
-		19B356072E492072002F301A /* PBXContainerItemProxy */ = {
+		1956CEFE2E49449300A5BDAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 193584C92E49202500B5DAE6 /* ShareClient.xcodeproj */;
+			containerPortal = 1956CEF52E49449300A5BDAF /* ShareClient.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = A9ED4DA4225EB4D30080DEBA;
 			remoteInfo = "ShareClient-watchOS";
 		};
-		19B356092E492072002F301A /* PBXContainerItemProxy */ = {
+		1956CF002E49449300A5BDAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 193584C92E49202500B5DAE6 /* ShareClient.xcodeproj */;
+			containerPortal = 1956CEF52E49449300A5BDAF /* ShareClient.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 43A8EC82210E664300A81379;
 			remoteInfo = ShareClientUI;
 		};
-		19B3560B2E492072002F301A /* PBXContainerItemProxy */ = {
+		1956CF022E49449300A5BDAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 193584C92E49202500B5DAE6 /* ShareClient.xcodeproj */;
+			containerPortal = 1956CEF52E49449300A5BDAF /* ShareClient.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = B40BF25E23ABD47400A43CEE;
 			remoteInfo = ShareClientPlugin;
 		};
-		19B356212E492072002F301A /* PBXContainerItemProxy */ = {
+		1956CF0B2E4944B700A5BDAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 193584C52E49202500B5DAE6 /* OmniBLE.xcodeproj */;
+			containerPortal = 1956CF042E4944B600A5BDAF /* G7SensorKit.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 84752E8226ED0FFE009FD801;
-			remoteInfo = OmniBLE;
+			remoteGlobalIDString = C17F50C6291EAC3800555EB5;
+			remoteInfo = G7SensorKit;
 		};
-		19B356232E492072002F301A /* PBXContainerItemProxy */ = {
+		1956CF0D2E4944B700A5BDAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 193584C52E49202500B5DAE6 /* OmniBLE.xcodeproj */;
+			containerPortal = 1956CF042E4944B600A5BDAF /* G7SensorKit.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 84752E8B26ED0FFE009FD801;
-			remoteInfo = OmniBLETests;
+			remoteGlobalIDString = C17F50CE291EAC3800555EB5;
+			remoteInfo = G7SensorKitTests;
 		};
-		19B356252E492072002F301A /* PBXContainerItemProxy */ = {
+		1956CF0F2E4944B700A5BDAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 193584C52E49202500B5DAE6 /* OmniBLE.xcodeproj */;
+			containerPortal = 1956CF042E4944B600A5BDAF /* G7SensorKit.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = C187C197279086A8006E3557;
-			remoteInfo = OmniBLEPlugin;
+			remoteGlobalIDString = C17F50F8291EAC9100555EB5;
+			remoteInfo = G7SensorKitUI;
 		};
-		19B356272E492072002F301A /* PBXContainerItemProxy */ = {
+		1956CF112E4944B700A5BDAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 193584C52E49202500B5DAE6 /* OmniBLE.xcodeproj */;
+			containerPortal = 1956CF042E4944B600A5BDAF /* G7SensorKit.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = D8C72BD92A50D7D700268D82;
-			remoteInfo = OmniBLEParser;
+			remoteGlobalIDString = C17F511D291EACCD00555EB5;
+			remoteInfo = G7SensorPlugin;
 		};
-		19B3564D2E492072002F301A /* PBXContainerItemProxy */ = {
+		1956CF202E49451600A5BDAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 193584C82E49202500B5DAE6 /* LibreTransmitter.xcodeproj */;
+			containerPortal = 1956CF132E49451500A5BDAF /* LoopKit.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 432B0E881CDFC3C50045347B;
-			remoteInfo = LibreTransmitter;
+			remoteGlobalIDString = 430157F71C7EC03B00B64B63;
+			remoteInfo = "LoopKit Example";
 		};
-		19B3564F2E492072002F301A /* PBXContainerItemProxy */ = {
+		1956CF222E49451600A5BDAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 193584C82E49202500B5DAE6 /* LibreTransmitter.xcodeproj */;
+			containerPortal = 1956CF132E49451500A5BDAF /* LoopKit.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 43A8EC82210E664300A81379;
-			remoteInfo = LibreTransmitterUI;
+			remoteGlobalIDString = 43D8FDCB1C728FDF0073BE78;
+			remoteInfo = LoopKit;
 		};
-		19B356512E492072002F301A /* PBXContainerItemProxy */ = {
+		1956CF242E49451600A5BDAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 193584C82E49202500B5DAE6 /* LibreTransmitter.xcodeproj */;
+			containerPortal = 1956CF132E49451500A5BDAF /* LoopKit.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = B40BF25E23ABD47400A43CEE;
-			remoteInfo = LibreTransmitterPlugin;
+			remoteGlobalIDString = A9E675F022713F4700E25293;
+			remoteInfo = "LoopKit-watchOS";
 		};
-		19B356532E492072002F301A /* PBXContainerItemProxy */ = {
+		1956CF262E49451600A5BDAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 193584C82E49202500B5DAE6 /* LibreTransmitter.xcodeproj */;
+			containerPortal = 1956CF132E49451500A5BDAF /* LoopKit.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = C1BDBAFA2A4397E200A787D1;
-			remoteInfo = LibreDemoPlugin;
+			remoteGlobalIDString = 43D8FDD51C728FDF0073BE78;
+			remoteInfo = LoopKitTests;
 		};
-		19B356592E492072002F301A /* PBXContainerItemProxy */ = {
+		1956CF282E49451600A5BDAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 193584C62E49202500B5DAE6 /* MinimedKit.xcodeproj */;
+			containerPortal = 1956CF132E49451500A5BDAF /* LoopKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1DEE230124A676A300693C32;
+			remoteInfo = LoopKitHostedTests;
+		};
+		1956CF2A2E49451600A5BDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1956CF132E49451500A5BDAF /* LoopKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 43BA7154201E484D0058961E;
+			remoteInfo = LoopKitUI;
+		};
+		1956CF2C2E49451600A5BDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1956CF132E49451500A5BDAF /* LoopKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 89D2047221CC7BD7001238CC;
+			remoteInfo = MockKit;
+		};
+		1956CF2E2E49451600A5BDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1956CF132E49451500A5BDAF /* LoopKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B4CEE2E0257129780093111B;
+			remoteInfo = MockKitTests;
+		};
+		1956CF302E49451600A5BDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1956CF132E49451500A5BDAF /* LoopKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 89D2048F21CC7C12001238CC;
+			remoteInfo = MockKitUI;
+		};
+		1956CF322E49451600A5BDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1956CF132E49451500A5BDAF /* LoopKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 892A5D34222F03CB008961AB;
+			remoteInfo = LoopTestingKit;
+		};
+		1956CF3B2E49452C00A5BDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1956CF342E49452C00A5BDAF /* MinimedKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C1E3491129C7A866009A50A5;
 			remoteInfo = MinimedKit;
 		};
-		19B3565B2E492072002F301A /* PBXContainerItemProxy */ = {
+		1956CF3D2E49452C00A5BDAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 193584C62E49202500B5DAE6 /* MinimedKit.xcodeproj */;
+			containerPortal = 1956CF342E49452C00A5BDAF /* MinimedKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C1E34B0129C7ABCB009A50A5;
 			remoteInfo = MinimedKitUI;
 		};
-		19B3565D2E492072002F301A /* PBXContainerItemProxy */ = {
+		1956CF3F2E49452C00A5BDAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 193584C62E49202500B5DAE6 /* MinimedKit.xcodeproj */;
+			containerPortal = 1956CF342E49452C00A5BDAF /* MinimedKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C1E34B5B29C7AD01009A50A5;
 			remoteInfo = MinimedKitPlugin;
 		};
-		19B3565F2E492072002F301A /* PBXContainerItemProxy */ = {
+		1956CF412E49452C00A5BDAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 193584C62E49202500B5DAE6 /* MinimedKit.xcodeproj */;
+			containerPortal = 1956CF342E49452C00A5BDAF /* MinimedKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C13CC34129C7B73A007F25DE;
 			remoteInfo = MinimedKitTests;
 		};
-		38E8752627554D5700975559 /* PBXContainerItemProxy */ = {
+		1956CF4A2E49454600A5BDAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 388E595025AD948C0019842D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 38E8752327554D5700975559;
-			remoteInfo = "FreeAPSWatch WatchKit Extension";
+			containerPortal = 1956CF432E49454500A5BDAF /* OmniBLE.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 84752E8226ED0FFE009FD801;
+			remoteInfo = OmniBLE;
+		};
+		1956CF4C2E49454600A5BDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1956CF432E49454500A5BDAF /* OmniBLE.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 84752E8B26ED0FFE009FD801;
+			remoteInfo = OmniBLETests;
+		};
+		1956CF4E2E49454600A5BDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1956CF432E49454500A5BDAF /* OmniBLE.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C187C197279086A8006E3557;
+			remoteInfo = OmniBLEPlugin;
+		};
+		1956CF502E49454600A5BDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1956CF432E49454500A5BDAF /* OmniBLE.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D8C72BD92A50D7D700268D82;
+			remoteInfo = OmniBLEParser;
+		};
+		1956CF5A2E49456400A5BDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1956CF522E49456300A5BDAF /* OmniKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C124016C29C7D87A00B32844;
+			remoteInfo = OmniKit;
+		};
+		1956CF5C2E49456400A5BDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1956CF522E49456300A5BDAF /* OmniKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C124020B29C7D92700B32844;
+			remoteInfo = OmniKitUI;
+		};
+		1956CF5E2E49456400A5BDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1956CF522E49456300A5BDAF /* OmniKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C124021729C7D93D00B32844;
+			remoteInfo = OmniKitPlugin;
+		};
+		1956CF602E49456400A5BDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1956CF522E49456300A5BDAF /* OmniKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C12ED9CA29C7DBA900435701;
+			remoteInfo = OmniKitTests;
+		};
+		1956CF622E49456400A5BDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1956CF522E49456300A5BDAF /* OmniKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C1229C6B29C7F0840066A89C;
+			remoteInfo = OmniKitPacketParser;
+		};
+		1956CF6C2E49457B00A5BDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1956CF642E49457A00A5BDAF /* RileyLinkKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C12EA237198B436800309FA4;
+			remoteInfo = RileyLink;
+		};
+		1956CF6E2E49457B00A5BDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1956CF642E49457A00A5BDAF /* RileyLinkKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 431CE76F1F98564100255374;
+			remoteInfo = RileyLinkBLEKit;
+		};
+		1956CF702E49457B00A5BDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1956CF642E49457A00A5BDAF /* RileyLinkKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 431CE7771F98564200255374;
+			remoteInfo = RileyLinkBLEKitTests;
+		};
+		1956CF722E49457B00A5BDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1956CF642E49457A00A5BDAF /* RileyLinkKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 43722FAE1CB9F7630038B7F2;
+			remoteInfo = RileyLinkKit;
+		};
+		1956CF742E49457B00A5BDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1956CF642E49457A00A5BDAF /* RileyLinkKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 43D5E78E1FAF7BFB004ACDB7;
+			remoteInfo = RileyLinkKitUI;
+		};
+		1956CF7E2E49459400A5BDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1956CF762E49459400A5BDAF /* TidepoolService.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A9DAACFF22E7987800E76C9F;
+			remoteInfo = TidepoolServiceKit;
+		};
+		1956CF802E49459400A5BDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1956CF762E49459400A5BDAF /* TidepoolService.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A9DAAD0722E7987800E76C9F;
+			remoteInfo = TidepoolServiceKitTests;
+		};
+		1956CF822E49459400A5BDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1956CF762E49459400A5BDAF /* TidepoolService.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A9DAAD1B22E7988900E76C9F;
+			remoteInfo = TidepoolServiceKitUI;
+		};
+		1956CF842E49459400A5BDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1956CF762E49459400A5BDAF /* TidepoolService.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A9DAAD2322E7988900E76C9F;
+			remoteInfo = TidepoolServiceKitUITests;
+		};
+		1956CF862E49459400A5BDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1956CF762E49459400A5BDAF /* TidepoolService.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A94AE4E4235A89B5005CA320;
+			remoteInfo = TidepoolServiceKitPlugin;
+		};
+		19603AC02E49439300CCC88B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19603AAB2E49434500CCC88B /* LibreTransmitter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 432B0E881CDFC3C50045347B;
+			remoteInfo = LibreTransmitter;
+		};
+		19603AC22E49439300CCC88B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19603AAB2E49434500CCC88B /* LibreTransmitter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 43A8EC82210E664300A81379;
+			remoteInfo = LibreTransmitterUI;
+		};
+		19603AC42E49439300CCC88B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19603AAB2E49434500CCC88B /* LibreTransmitter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B40BF25E23ABD47400A43CEE;
+			remoteInfo = LibreTransmitterPlugin;
+		};
+		19603AC62E49439300CCC88B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19603AAB2E49434500CCC88B /* LibreTransmitter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C1BDBAFA2A4397E200A787D1;
+			remoteInfo = LibreDemoPlugin;
 		};
 		38E8753A27554D5900975559 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -831,7 +907,7 @@
 				CEC751DA29D8827A006E9D24 /* OmniKitUI.framework in Embed Frameworks */,
 				CE79502F29980E5800FA576E /* ShareClientUI.framework in Embed Frameworks */,
 				CE79502C29980CB500FA576E /* G7SensorKitUI.framework in Embed Frameworks */,
-				CE51DD1D2A01970900F163F7 /* ConnectIQ 2.xcframework in Embed Frameworks */,
+				CE51DD1D2A01970900F163F7 /* ConnectIQ.xcframework in Embed Frameworks */,
 				CE79502B29980CAF00FA576E /* CGMBLEKitUI.framework in Embed Frameworks */,
 				CE2FAD38297D69E1001A872C /* ShareClient.framework in Embed Frameworks */,
 				CE398D19297C9EFD00DF218F /* G7SensorKit.framework in Embed Frameworks */,
@@ -861,17 +937,6 @@
 				38E8753C27554D5900975559 /* FreeAPSWatch.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		38E8754027554D5900975559 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				38E8752527554D5700975559 /* FreeAPSWatch WatchKit Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6B1A8D122B14D88E00E76752 /* Embed Foundation Extensions */ = {
@@ -935,14 +1000,6 @@
 		192A9A112C0F5361000BBC29 /* MealsShortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsShortcuts.swift; sourceTree = "<group>"; };
 		193339762E05BC7700E80EF5 /* DynamicHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHistoryView.swift; sourceTree = "<group>"; };
 		1935363F28496F7D001E0B16 /* Dynamic structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dynamic structs.swift"; sourceTree = "<group>"; };
-		1935849A2E491B6F00B5DAE6 /* TidepoolService.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TidepoolService.xcodeproj; path = TidepoolService/TidepoolService.xcodeproj; sourceTree = "<group>"; };
-		193584AF2E491FE800B5DAE6 /* RileyLinkKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RileyLinkKit.xcodeproj; path = RileyLinkKit/RileyLinkKit.xcodeproj; sourceTree = "<group>"; };
-		193584C42E49202500B5DAE6 /* OmniKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OmniKit.xcodeproj; path = OmniKit/OmniKit.xcodeproj; sourceTree = "<group>"; };
-		193584C52E49202500B5DAE6 /* OmniBLE.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OmniBLE.xcodeproj; path = OmniBLE/OmniBLE.xcodeproj; sourceTree = "<group>"; };
-		193584C62E49202500B5DAE6 /* MinimedKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MinimedKit.xcodeproj; path = MinimedKit/MinimedKit.xcodeproj; sourceTree = "<group>"; };
-		193584C72E49202500B5DAE6 /* LoopKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LoopKit.xcodeproj; path = LoopKit/LoopKit.xcodeproj; sourceTree = "<group>"; };
-		193584C82E49202500B5DAE6 /* LibreTransmitter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LibreTransmitter.xcodeproj; path = LibreTransmitter/LibreTransmitter.xcodeproj; sourceTree = "<group>"; };
-		193584C92E49202500B5DAE6 /* ShareClient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShareClient.xcodeproj; path = "dexcom-share-client-swift/ShareClient.xcodeproj"; sourceTree = "<group>"; };
 		19389E542D69393900636E49 /* TemporaryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporaryData.swift; sourceTree = "<group>"; };
 		193CA2D92E1E72A500DF9998 /* WebViewScriptExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewScriptExecutor.swift; sourceTree = "<group>"; };
 		193CA2DB2E1E742C00DF9998 /* FunctionScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionScript.swift; sourceTree = "<group>"; };
@@ -958,6 +1015,15 @@
 		19493A3C2C59987700EC83A7 /* DatabaseModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseModels.swift; sourceTree = "<group>"; };
 		194C32762B93A9BF0016FB2A /* OverrideShortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverrideShortcuts.swift; sourceTree = "<group>"; };
 		194D7E6D2B974F9F007A38C1 /* LoopsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopsView.swift; sourceTree = "<group>"; };
+		1956CEDA2E49447B00A5BDAF /* CGMBLEKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CGMBLEKit.xcodeproj; sourceTree = "<group>"; };
+		1956CEF52E49449300A5BDAF /* ShareClient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ShareClient.xcodeproj; sourceTree = "<group>"; };
+		1956CF042E4944B600A5BDAF /* G7SensorKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = G7SensorKit.xcodeproj; sourceTree = "<group>"; };
+		1956CF132E49451500A5BDAF /* LoopKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = LoopKit.xcodeproj; sourceTree = "<group>"; };
+		1956CF342E49452C00A5BDAF /* MinimedKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = MinimedKit.xcodeproj; sourceTree = "<group>"; };
+		1956CF432E49454500A5BDAF /* OmniBLE.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = OmniBLE.xcodeproj; sourceTree = "<group>"; };
+		1956CF522E49456300A5BDAF /* OmniKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = OmniKit.xcodeproj; sourceTree = "<group>"; };
+		1956CF642E49457A00A5BDAF /* RileyLinkKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = RileyLinkKit.xcodeproj; sourceTree = "<group>"; };
+		1956CF762E49459400A5BDAF /* TidepoolService.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = TidepoolService.xcodeproj; sourceTree = "<group>"; };
 		1956FB202AFF79E200C7B4FF /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
 		195A70B52DC0C3C8009A2F01 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		195A70B62DC0C3C9009A2F01 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -986,6 +1052,7 @@
 		195D80B82AF697F700D25097 /* DynamicProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicProvider.swift; sourceTree = "<group>"; };
 		195D80BA2AF6980B00D25097 /* DynamicStateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicStateModel.swift; sourceTree = "<group>"; };
 		195F00472B5C267D00DAC71A /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
+		19603AAB2E49434500CCC88B /* LibreTransmitter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = LibreTransmitter.xcodeproj; sourceTree = "<group>"; };
 		1967DFBD29D052C200759F30 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		1967DFBF29D053AC00759F30 /* IconSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconSelection.swift; sourceTree = "<group>"; };
 		196809E12D46E7B300BA566F /* OpenClosedShortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenClosedShortcuts.swift; sourceTree = "<group>"; };
@@ -1238,7 +1305,6 @@
 		38E87407274F9AD000975559 /* UserNotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotificationsManager.swift; sourceTree = "<group>"; };
 		38E8751C27554D5500975559 /* FreeAPSWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeAPSWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E8751E27554D5700975559 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		38E8752427554D5700975559 /* FreeAPSWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "FreeAPSWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E8752927554D5700975559 /* FreeAPSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeAPSApp.swift; sourceTree = "<group>"; };
 		38E8752B27554D5700975559 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		38E8752D27554D5700975559 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
@@ -1367,7 +1433,7 @@
 		CE398D1A297D69A900DF218F /* ShareClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ShareClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE48C86328CA69D5007C0598 /* OmniBLEPumpManagerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmniBLEPumpManagerExtensions.swift; sourceTree = "<group>"; };
 		CE48C86528CA6B48007C0598 /* OmniPodManagerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmniPodManagerExtensions.swift; sourceTree = "<group>"; };
-		CE51DD1B2A01970800F163F7 /* ConnectIQ 2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = "ConnectIQ 2.xcframework"; path = "Dependencies/ConnectIQ 2.xcframework"; sourceTree = "<group>"; };
+		CE51DD1B2A01970800F163F7 /* ConnectIQ.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ConnectIQ.xcframework; path = Dependencies/ConnectIQ.xcframework; sourceTree = "<group>"; };
 		CE6B025628F350FF000C5502 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS9.1.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		CE7950232997D81700FA576E /* CGMSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGMSettingsView.swift; sourceTree = "<group>"; };
 		CE7950252998056D00FA576E /* CGMSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGMSetupView.swift; sourceTree = "<group>"; };
@@ -1386,7 +1452,6 @@
 		CE7CA3572A064E2F004BE681 /* ListStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListStateView.swift; sourceTree = "<group>"; };
 		CE82E02428E867BA00473A9C /* AlertStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertStorage.swift; sourceTree = "<group>"; };
 		CE82E02628E869DF00473A9C /* AlertEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertEntry.swift; sourceTree = "<group>"; };
-		CE94597929E9DF7B0047C9C6 /* ConnectIQ.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ConnectIQ.framework; path = "Dependencies/ios-armv7_arm64/ConnectIQ.framework"; sourceTree = "<group>"; };
 		CE94597D29E9E1EE0047C9C6 /* GarminManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarminManager.swift; sourceTree = "<group>"; };
 		CE94597F29E9E3BD0047C9C6 /* WatchConfigDataFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConfigDataFlow.swift; sourceTree = "<group>"; };
 		CE94598129E9E3D30047C9C6 /* WatchConfigProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConfigProvider.swift; sourceTree = "<group>"; };
@@ -1473,7 +1538,7 @@
 				3818AA71274C278200843DB3 /* LoopTestingKit.framework in Frameworks */,
 				3818AA47274C255A00843DB3 /* LibreTransmitter in Frameworks */,
 				3818AA4A274C267000843DB3 /* CGMBLEKit.framework in Frameworks */,
-				CE51DD1C2A01970900F163F7 /* ConnectIQ 2.xcframework in Frameworks */,
+				CE51DD1C2A01970900F163F7 /* ConnectIQ.xcframework in Frameworks */,
 				3811DE1025C9D37700A708ED /* Swinject in Frameworks */,
 				3818AA5C274C26A300843DB3 /* MockKit.framework in Frameworks */,
 				3818AA6A274C26A500843DB3 /* RileyLinkBLEKit.framework in Frameworks */,
@@ -1656,6 +1721,118 @@
 			path = Previews;
 			sourceTree = "<group>";
 		};
+		1956CEDB2E49447B00A5BDAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1956CEE62E49447B00A5BDAF /* CGMBLEKit.framework */,
+				1956CEE82E49447B00A5BDAF /* CGMBLEKit.framework */,
+				1956CEEA2E49447B00A5BDAF /* CGMBLEKitUI.framework */,
+				1956CEEC2E49447B00A5BDAF /* CGMBLEKitTests.xctest */,
+				1956CEEE2E49447B00A5BDAF /* CGMBLEKit Example.app */,
+				1956CEF02E49447B00A5BDAF /* ResetTransmitter.app */,
+				1956CEF22E49447B00A5BDAF /* CGMBLEKitG5Plugin.loopplugin */,
+				1956CEF42E49447B00A5BDAF /* CGMBLEKitG6Plugin.loopplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1956CEF62E49449300A5BDAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1956CEFD2E49449300A5BDAF /* ShareClient.framework */,
+				1956CEFF2E49449300A5BDAF /* ShareClient.framework */,
+				1956CF012E49449300A5BDAF /* ShareClientUI.framework */,
+				1956CF032E49449300A5BDAF /* ShareClientPlugin.loopplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1956CF052E4944B600A5BDAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1956CF0C2E4944B700A5BDAF /* G7SensorKit.framework */,
+				1956CF0E2E4944B700A5BDAF /* G7SensorKitTests.xctest */,
+				1956CF102E4944B700A5BDAF /* G7SensorKitUI.framework */,
+				1956CF122E4944B700A5BDAF /* G7SensorPlugin.loopplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1956CF142E49451500A5BDAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1956CF212E49451600A5BDAF /* LoopKit Example.app */,
+				1956CF232E49451600A5BDAF /* LoopKit.framework */,
+				1956CF252E49451600A5BDAF /* LoopKit.framework */,
+				1956CF272E49451600A5BDAF /* LoopKitTests.xctest */,
+				1956CF292E49451600A5BDAF /* LoopKitHostedTests.xctest */,
+				1956CF2B2E49451600A5BDAF /* LoopKitUI.framework */,
+				1956CF2D2E49451600A5BDAF /* MockKit.framework */,
+				1956CF2F2E49451600A5BDAF /* MockKitTests.xctest */,
+				1956CF312E49451600A5BDAF /* MockKitUI.framework */,
+				1956CF332E49451600A5BDAF /* LoopTestingKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1956CF352E49452C00A5BDAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1956CF3C2E49452C00A5BDAF /* MinimedKit.framework */,
+				1956CF3E2E49452C00A5BDAF /* MinimedKitUI.framework */,
+				1956CF402E49452C00A5BDAF /* MinimedKitPlugin.loopplugin */,
+				1956CF422E49452C00A5BDAF /* MinimedKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1956CF442E49454500A5BDAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1956CF4B2E49454600A5BDAF /* OmniBLE.framework */,
+				1956CF4D2E49454600A5BDAF /* OmniBLETests.xctest */,
+				1956CF4F2E49454600A5BDAF /* OmniBLEPlugin.loopplugin */,
+				1956CF512E49454600A5BDAF /* OmniBLEParser */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1956CF532E49456300A5BDAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1956CF5B2E49456400A5BDAF /* OmniKit.framework */,
+				1956CF5D2E49456400A5BDAF /* OmniKitUI.framework */,
+				1956CF5F2E49456400A5BDAF /* OmniKitPlugin.loopplugin */,
+				1956CF612E49456400A5BDAF /* OmniKitTests.xctest */,
+				1956CF632E49456400A5BDAF /* OmniKitPacketParser */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1956CF652E49457A00A5BDAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1956CF6D2E49457B00A5BDAF /* RileyLink.app */,
+				1956CF6F2E49457B00A5BDAF /* RileyLinkBLEKit.framework */,
+				1956CF712E49457B00A5BDAF /* RileyLinkBLEKitTests.xctest */,
+				1956CF732E49457B00A5BDAF /* RileyLinkKit.framework */,
+				1956CF752E49457B00A5BDAF /* RileyLinkKitUI.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1956CF772E49459400A5BDAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1956CF7F2E49459400A5BDAF /* TidepoolServiceKit.framework */,
+				1956CF812E49459400A5BDAF /* TidepoolServiceKitTests.xctest */,
+				1956CF832E49459400A5BDAF /* TidepoolServiceKitUI.framework */,
+				1956CF852E49459400A5BDAF /* TidepoolServiceKitUITests.xctest */,
+				1956CF872E49459400A5BDAF /* TidepoolServiceKitPlugin.loopplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		195D80B22AF696EE00D25097 /* Dynamic */ = {
 			isa = PBXGroup;
 			children = (
@@ -1674,6 +1851,17 @@
 				193339762E05BC7700E80EF5 /* DynamicHistoryView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		19603ABA2E49439300CCC88B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19603AC12E49439300CCC88B /* LibreTransmitter.framework */,
+				19603AC32E49439300CCC88B /* LibreTransmitterUI.framework */,
+				19603AC52E49439300CCC88B /* LibreTransmitterPlugin.loopplugin */,
+				19603AC72E49439300CCC88B /* LibreDemoPlugin.loopplugin */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		196579A52B924BD400642E8E /* Overrides */ = {
@@ -1737,103 +1925,6 @@
 				198F67B02CFCBD5D00E538CB /* View */,
 			);
 			path = AutoISF;
-			sourceTree = "<group>";
-		};
-		19B3558D2E492071002F301A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				19B355B52E492071002F301A /* RileyLink.app */,
-				19B355B72E492071002F301A /* RileyLinkBLEKit.framework */,
-				19B355B92E492071002F301A /* RileyLinkBLEKitTests.xctest */,
-				19B355BB2E492071002F301A /* RileyLinkKit.framework */,
-				19B355BD2E492071002F301A /* RileyLinkKitUI.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		19B3558F2E492071002F301A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				19B3559C2E492071002F301A /* LoopKit Example.app */,
-				19B3559E2E492071002F301A /* LoopKit.framework */,
-				19B355A02E492071002F301A /* LoopKit.framework */,
-				19B355A22E492071002F301A /* LoopKitTests.xctest */,
-				19B355A42E492071002F301A /* LoopKitHostedTests.xctest */,
-				19B355A62E492071002F301A /* LoopKitUI.framework */,
-				19B355A82E492071002F301A /* MockKit.framework */,
-				19B355AA2E492071002F301A /* MockKitTests.xctest */,
-				19B355AC2E492071002F301A /* MockKitUI.framework */,
-				19B355AE2E492071002F301A /* LoopTestingKit.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		19B355BE2E492071002F301A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				19B355C62E492072002F301A /* TidepoolServiceKit.framework */,
-				19B355C82E492072002F301A /* TidepoolServiceKitTests.xctest */,
-				19B355CA2E492072002F301A /* TidepoolServiceKitUI.framework */,
-				19B355CC2E492072002F301A /* TidepoolServiceKitUITests.xctest */,
-				19B355CE2E492072002F301A /* TidepoolServiceKitPlugin.loopplugin */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		19B355D12E492072002F301A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				19B355E82E492072002F301A /* OmniKit.framework */,
-				19B355EA2E492072002F301A /* OmniKitUI.framework */,
-				19B355EC2E492072002F301A /* OmniKitPlugin.loopplugin */,
-				19B355EE2E492072002F301A /* OmniKitTests.xctest */,
-				19B355F02E492072002F301A /* OmniKitPacketParser */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		19B355F32E492072002F301A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				19B356062E492072002F301A /* ShareClient.framework */,
-				19B356082E492072002F301A /* ShareClient.framework */,
-				19B3560A2E492072002F301A /* ShareClientUI.framework */,
-				19B3560C2E492072002F301A /* ShareClientPlugin.loopplugin */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		19B3560F2E492072002F301A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				19B356222E492072002F301A /* OmniBLE.framework */,
-				19B356242E492072002F301A /* OmniBLETests.xctest */,
-				19B356262E492072002F301A /* OmniBLEPlugin.loopplugin */,
-				19B356282E492072002F301A /* OmniBLEParser */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		19B3562B2E492072002F301A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				19B3564E2E492072002F301A /* LibreTransmitter.framework */,
-				19B356502E492072002F301A /* LibreTransmitterUI.framework */,
-				19B356522E492072002F301A /* LibreTransmitterPlugin.loopplugin */,
-				19B356542E492072002F301A /* LibreDemoPlugin.loopplugin */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		19B3562F2E492072002F301A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				19B3565A2E492072002F301A /* MinimedKit.framework */,
-				19B3565C2E492072002F301A /* MinimedKitUI.framework */,
-				19B3565E2E492072002F301A /* MinimedKitPlugin.loopplugin */,
-				19B356602E492072002F301A /* MinimedKitTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		19B356652E49223A002F301A /* Tests */ = {
@@ -2276,8 +2367,7 @@
 		3818AA48274C267000843DB3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CE51DD1B2A01970800F163F7 /* ConnectIQ 2.xcframework */,
-				CE94597929E9DF7B0047C9C6 /* ConnectIQ.framework */,
+				CE51DD1B2A01970800F163F7 /* ConnectIQ.xcframework */,
 				CEC751D529D88262006E9D24 /* MinimedKit.framework */,
 				CEC751D729D88262006E9D24 /* MinimedKitUI.framework */,
 				CEC751D129D88257006E9D24 /* OmniKit.framework */,
@@ -2385,6 +2475,15 @@
 		388E594F25AD948C0019842D = {
 			isa = PBXGroup;
 			children = (
+				1956CF762E49459400A5BDAF /* TidepoolService.xcodeproj */,
+				1956CF642E49457A00A5BDAF /* RileyLinkKit.xcodeproj */,
+				1956CF522E49456300A5BDAF /* OmniKit.xcodeproj */,
+				1956CF432E49454500A5BDAF /* OmniBLE.xcodeproj */,
+				1956CF342E49452C00A5BDAF /* MinimedKit.xcodeproj */,
+				1956CF132E49451500A5BDAF /* LoopKit.xcodeproj */,
+				1956CF042E4944B600A5BDAF /* G7SensorKit.xcodeproj */,
+				1956CEF52E49449300A5BDAF /* ShareClient.xcodeproj */,
+				1956CEDA2E49447B00A5BDAF /* CGMBLEKit.xcodeproj */,
 				FEBEEC142E03F45B005473DC /* Settings.bundle */,
 				FEFA5C0D299F810B00765C17 /* Core_Data.xcdatamodeld */,
 				38F3783A2613555C009DB701 /* Config.xcconfig */,
@@ -2398,14 +2497,7 @@
 				388E595925AD948C0019842D /* Products */,
 				192F0FF5276AC36D0085BE4D /* Recovered References */,
 				3818AA48274C267000843DB3 /* Frameworks */,
-				193584AF2E491FE800B5DAE6 /* RileyLinkKit.xcodeproj */,
-				193584C42E49202500B5DAE6 /* OmniKit.xcodeproj */,
-				193584C52E49202500B5DAE6 /* OmniBLE.xcodeproj */,
-				193584C62E49202500B5DAE6 /* MinimedKit.xcodeproj */,
-				193584C72E49202500B5DAE6 /* LoopKit.xcodeproj */,
-				193584C82E49202500B5DAE6 /* LibreTransmitter.xcodeproj */,
-				193584C92E49202500B5DAE6 /* ShareClient.xcodeproj */,
-				1935849A2E491B6F00B5DAE6 /* TidepoolService.xcodeproj */,
+				19603AAB2E49434500CCC88B /* LibreTransmitter.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2415,7 +2507,6 @@
 				388E595825AD948C0019842D /* FreeAPS.app */,
 				38FCF3ED25E9028E0078B0D1 /* FreeAPSTests.xctest */,
 				38E8751C27554D5500975559 /* FreeAPSWatch.app */,
-				38E8752427554D5700975559 /* FreeAPSWatch WatchKit Extension.appex */,
 				6B1A8D172B14D91600E76752 /* LiveActivityExtension.appex */,
 			);
 			name = Products;
@@ -3282,37 +3373,17 @@
 			buildConfigurationList = 38E8754427554D5900975559 /* Build configuration list for PBXNativeTarget "FreeAPSWatch" */;
 			buildPhases = (
 				38E8751A27554D5500975559 /* Resources */,
-				38E8754027554D5900975559 /* Embed App Extensions */,
+				38E8752027554D5700975559 /* Sources */,
+				38E8752127554D5700975559 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				38E8752727554D5700975559 /* PBXTargetDependency */,
 			);
 			name = FreeAPSWatch;
 			productName = FreeAPSWatch;
 			productReference = 38E8751C27554D5500975559 /* FreeAPSWatch.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		38E8752327554D5700975559 /* FreeAPSWatch WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 38E8754327554D5900975559 /* Build configuration list for PBXNativeTarget "FreeAPSWatch WatchKit Extension" */;
-			buildPhases = (
-				38E8752027554D5700975559 /* Sources */,
-				38E8752127554D5700975559 /* Frameworks */,
-				38E8752227554D5700975559 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "FreeAPSWatch WatchKit Extension";
-			packageProductDependencies = (
-				38E8755727567AE400975559 /* SwiftDate */,
-			);
-			productName = "FreeAPSWatch WatchKit Extension";
-			productReference = 38E8752427554D5700975559 /* FreeAPSWatch WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
+			productType = "com.apple.product-type.application";
 		};
 		38FCF3EC25E9028E0078B0D1 /* FreeAPSTests */ = {
 			isa = PBXNativeTarget;
@@ -3355,15 +3426,13 @@
 		388E595025AD948C0019842D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1240;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1640;
 				TargetAttributes = {
 					388E595725AD948C0019842D = {
 						CreatedOnToolsVersion = 12.3;
 					};
 					38E8751B27554D5500975559 = {
-						CreatedOnToolsVersion = 13.1;
-					};
-					38E8752327554D5700975559 = {
 						CreatedOnToolsVersion = 13.1;
 					};
 					38FCF3EC25E9028E0078B0D1 = {
@@ -3417,36 +3486,44 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 19B3562B2E492072002F301A /* Products */;
-					ProjectRef = 193584C82E49202500B5DAE6 /* LibreTransmitter.xcodeproj */;
+					ProductGroup = 1956CEDB2E49447B00A5BDAF /* Products */;
+					ProjectRef = 1956CEDA2E49447B00A5BDAF /* CGMBLEKit.xcodeproj */;
 				},
 				{
-					ProductGroup = 19B3558F2E492071002F301A /* Products */;
-					ProjectRef = 193584C72E49202500B5DAE6 /* LoopKit.xcodeproj */;
+					ProductGroup = 1956CF052E4944B600A5BDAF /* Products */;
+					ProjectRef = 1956CF042E4944B600A5BDAF /* G7SensorKit.xcodeproj */;
 				},
 				{
-					ProductGroup = 19B3562F2E492072002F301A /* Products */;
-					ProjectRef = 193584C62E49202500B5DAE6 /* MinimedKit.xcodeproj */;
+					ProductGroup = 19603ABA2E49439300CCC88B /* Products */;
+					ProjectRef = 19603AAB2E49434500CCC88B /* LibreTransmitter.xcodeproj */;
 				},
 				{
-					ProductGroup = 19B3560F2E492072002F301A /* Products */;
-					ProjectRef = 193584C52E49202500B5DAE6 /* OmniBLE.xcodeproj */;
+					ProductGroup = 1956CF142E49451500A5BDAF /* Products */;
+					ProjectRef = 1956CF132E49451500A5BDAF /* LoopKit.xcodeproj */;
 				},
 				{
-					ProductGroup = 19B355D12E492072002F301A /* Products */;
-					ProjectRef = 193584C42E49202500B5DAE6 /* OmniKit.xcodeproj */;
+					ProductGroup = 1956CF352E49452C00A5BDAF /* Products */;
+					ProjectRef = 1956CF342E49452C00A5BDAF /* MinimedKit.xcodeproj */;
 				},
 				{
-					ProductGroup = 19B3558D2E492071002F301A /* Products */;
-					ProjectRef = 193584AF2E491FE800B5DAE6 /* RileyLinkKit.xcodeproj */;
+					ProductGroup = 1956CF442E49454500A5BDAF /* Products */;
+					ProjectRef = 1956CF432E49454500A5BDAF /* OmniBLE.xcodeproj */;
 				},
 				{
-					ProductGroup = 19B355F32E492072002F301A /* Products */;
-					ProjectRef = 193584C92E49202500B5DAE6 /* ShareClient.xcodeproj */;
+					ProductGroup = 1956CF532E49456300A5BDAF /* Products */;
+					ProjectRef = 1956CF522E49456300A5BDAF /* OmniKit.xcodeproj */;
 				},
 				{
-					ProductGroup = 19B355BE2E492071002F301A /* Products */;
-					ProjectRef = 1935849A2E491B6F00B5DAE6 /* TidepoolService.xcodeproj */;
+					ProductGroup = 1956CF652E49457A00A5BDAF /* Products */;
+					ProjectRef = 1956CF642E49457A00A5BDAF /* RileyLinkKit.xcodeproj */;
+				},
+				{
+					ProductGroup = 1956CEF62E49449300A5BDAF /* Products */;
+					ProjectRef = 1956CEF52E49449300A5BDAF /* ShareClient.xcodeproj */;
+				},
+				{
+					ProductGroup = 1956CF772E49459400A5BDAF /* Products */;
+					ProjectRef = 1956CF762E49459400A5BDAF /* TidepoolService.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -3454,298 +3531,381 @@
 				388E595725AD948C0019842D /* FreeAPS */,
 				38FCF3EC25E9028E0078B0D1 /* FreeAPSTests */,
 				38E8751B27554D5500975559 /* FreeAPSWatch */,
-				38E8752327554D5700975559 /* FreeAPSWatch WatchKit Extension */,
 				6B1A8D162B14D91500E76752 /* LiveActivityExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		19B3559C2E492071002F301A /* LoopKit Example.app */ = {
+		1956CEE62E49447B00A5BDAF /* CGMBLEKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CGMBLEKit.framework;
+			remoteRef = 1956CEE52E49447B00A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CEE82E49447B00A5BDAF /* CGMBLEKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CGMBLEKit.framework;
+			remoteRef = 1956CEE72E49447B00A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CEEA2E49447B00A5BDAF /* CGMBLEKitUI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CGMBLEKitUI.framework;
+			remoteRef = 1956CEE92E49447B00A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CEEC2E49447B00A5BDAF /* CGMBLEKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CGMBLEKitTests.xctest;
+			remoteRef = 1956CEEB2E49447B00A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CEEE2E49447B00A5BDAF /* CGMBLEKit Example.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
-			path = "LoopKit Example.app";
-			remoteRef = 19B3559B2E492071002F301A /* PBXContainerItemProxy */;
+			path = "CGMBLEKit Example.app";
+			remoteRef = 1956CEED2E49447B00A5BDAF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		19B3559E2E492071002F301A /* LoopKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = LoopKit.framework;
-			remoteRef = 19B3559D2E492071002F301A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		19B355A02E492071002F301A /* LoopKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = LoopKit.framework;
-			remoteRef = 19B3559F2E492071002F301A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		19B355A22E492071002F301A /* LoopKitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = LoopKitTests.xctest;
-			remoteRef = 19B355A12E492071002F301A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		19B355A42E492071002F301A /* LoopKitHostedTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = LoopKitHostedTests.xctest;
-			remoteRef = 19B355A32E492071002F301A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		19B355A62E492071002F301A /* LoopKitUI.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = LoopKitUI.framework;
-			remoteRef = 19B355A52E492071002F301A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		19B355A82E492071002F301A /* MockKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = MockKit.framework;
-			remoteRef = 19B355A72E492071002F301A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		19B355AA2E492071002F301A /* MockKitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = MockKitTests.xctest;
-			remoteRef = 19B355A92E492071002F301A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		19B355AC2E492071002F301A /* MockKitUI.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = MockKitUI.framework;
-			remoteRef = 19B355AB2E492071002F301A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		19B355AE2E492071002F301A /* LoopTestingKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = LoopTestingKit.framework;
-			remoteRef = 19B355AD2E492071002F301A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		19B355B52E492071002F301A /* RileyLink.app */ = {
+		1956CEF02E49447B00A5BDAF /* ResetTransmitter.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
-			path = RileyLink.app;
-			remoteRef = 19B355B42E492071002F301A /* PBXContainerItemProxy */;
+			path = ResetTransmitter.app;
+			remoteRef = 1956CEEF2E49447B00A5BDAF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		19B355B72E492071002F301A /* RileyLinkBLEKit.framework */ = {
+		1956CEF22E49447B00A5BDAF /* CGMBLEKitG5Plugin.loopplugin */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = RileyLinkBLEKit.framework;
-			remoteRef = 19B355B62E492071002F301A /* PBXContainerItemProxy */;
+			path = CGMBLEKitG5Plugin.loopplugin;
+			remoteRef = 1956CEF12E49447B00A5BDAF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		19B355B92E492071002F301A /* RileyLinkBLEKitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = RileyLinkBLEKitTests.xctest;
-			remoteRef = 19B355B82E492071002F301A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		19B355BB2E492071002F301A /* RileyLinkKit.framework */ = {
+		1956CEF42E49447B00A5BDAF /* CGMBLEKitG6Plugin.loopplugin */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = RileyLinkKit.framework;
-			remoteRef = 19B355BA2E492071002F301A /* PBXContainerItemProxy */;
+			path = CGMBLEKitG6Plugin.loopplugin;
+			remoteRef = 1956CEF32E49447B00A5BDAF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		19B355BD2E492071002F301A /* RileyLinkKitUI.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RileyLinkKitUI.framework;
-			remoteRef = 19B355BC2E492071002F301A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		19B355C62E492072002F301A /* TidepoolServiceKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = TidepoolServiceKit.framework;
-			remoteRef = 19B355C52E492072002F301A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		19B355C82E492072002F301A /* TidepoolServiceKitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = TidepoolServiceKitTests.xctest;
-			remoteRef = 19B355C72E492072002F301A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		19B355CA2E492072002F301A /* TidepoolServiceKitUI.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = TidepoolServiceKitUI.framework;
-			remoteRef = 19B355C92E492072002F301A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		19B355CC2E492072002F301A /* TidepoolServiceKitUITests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = TidepoolServiceKitUITests.xctest;
-			remoteRef = 19B355CB2E492072002F301A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		19B355CE2E492072002F301A /* TidepoolServiceKitPlugin.loopplugin */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = TidepoolServiceKitPlugin.loopplugin;
-			remoteRef = 19B355CD2E492072002F301A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		19B355E82E492072002F301A /* OmniKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OmniKit.framework;
-			remoteRef = 19B355E72E492072002F301A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		19B355EA2E492072002F301A /* OmniKitUI.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OmniKitUI.framework;
-			remoteRef = 19B355E92E492072002F301A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		19B355EC2E492072002F301A /* OmniKitPlugin.loopplugin */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OmniKitPlugin.loopplugin;
-			remoteRef = 19B355EB2E492072002F301A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		19B355EE2E492072002F301A /* OmniKitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = OmniKitTests.xctest;
-			remoteRef = 19B355ED2E492072002F301A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		19B355F02E492072002F301A /* OmniKitPacketParser */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = OmniKitPacketParser;
-			remoteRef = 19B355EF2E492072002F301A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		19B356062E492072002F301A /* ShareClient.framework */ = {
+		1956CEFD2E49449300A5BDAF /* ShareClient.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ShareClient.framework;
-			remoteRef = 19B356052E492072002F301A /* PBXContainerItemProxy */;
+			remoteRef = 1956CEFC2E49449300A5BDAF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		19B356082E492072002F301A /* ShareClient.framework */ = {
+		1956CEFF2E49449300A5BDAF /* ShareClient.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ShareClient.framework;
-			remoteRef = 19B356072E492072002F301A /* PBXContainerItemProxy */;
+			remoteRef = 1956CEFE2E49449300A5BDAF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		19B3560A2E492072002F301A /* ShareClientUI.framework */ = {
+		1956CF012E49449300A5BDAF /* ShareClientUI.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ShareClientUI.framework;
-			remoteRef = 19B356092E492072002F301A /* PBXContainerItemProxy */;
+			remoteRef = 1956CF002E49449300A5BDAF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		19B3560C2E492072002F301A /* ShareClientPlugin.loopplugin */ = {
+		1956CF032E49449300A5BDAF /* ShareClientPlugin.loopplugin */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ShareClientPlugin.loopplugin;
-			remoteRef = 19B3560B2E492072002F301A /* PBXContainerItemProxy */;
+			remoteRef = 1956CF022E49449300A5BDAF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		19B356222E492072002F301A /* OmniBLE.framework */ = {
+		1956CF0C2E4944B700A5BDAF /* G7SensorKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = OmniBLE.framework;
-			remoteRef = 19B356212E492072002F301A /* PBXContainerItemProxy */;
+			path = G7SensorKit.framework;
+			remoteRef = 1956CF0B2E4944B700A5BDAF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		19B356242E492072002F301A /* OmniBLETests.xctest */ = {
+		1956CF0E2E4944B700A5BDAF /* G7SensorKitTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = OmniBLETests.xctest;
-			remoteRef = 19B356232E492072002F301A /* PBXContainerItemProxy */;
+			path = G7SensorKitTests.xctest;
+			remoteRef = 1956CF0D2E4944B700A5BDAF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		19B356262E492072002F301A /* OmniBLEPlugin.loopplugin */ = {
+		1956CF102E4944B700A5BDAF /* G7SensorKitUI.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = OmniBLEPlugin.loopplugin;
-			remoteRef = 19B356252E492072002F301A /* PBXContainerItemProxy */;
+			path = G7SensorKitUI.framework;
+			remoteRef = 1956CF0F2E4944B700A5BDAF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		19B356282E492072002F301A /* OmniBLEParser */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = OmniBLEParser;
-			remoteRef = 19B356272E492072002F301A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		19B3564E2E492072002F301A /* LibreTransmitter.framework */ = {
+		1956CF122E4944B700A5BDAF /* G7SensorPlugin.loopplugin */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = LibreTransmitter.framework;
-			remoteRef = 19B3564D2E492072002F301A /* PBXContainerItemProxy */;
+			path = G7SensorPlugin.loopplugin;
+			remoteRef = 1956CF112E4944B700A5BDAF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		19B356502E492072002F301A /* LibreTransmitterUI.framework */ = {
+		1956CF212E49451600A5BDAF /* LoopKit Example.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "LoopKit Example.app";
+			remoteRef = 1956CF202E49451600A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CF232E49451600A5BDAF /* LoopKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = LibreTransmitterUI.framework;
-			remoteRef = 19B3564F2E492072002F301A /* PBXContainerItemProxy */;
+			path = LoopKit.framework;
+			remoteRef = 1956CF222E49451600A5BDAF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		19B356522E492072002F301A /* LibreTransmitterPlugin.loopplugin */ = {
+		1956CF252E49451600A5BDAF /* LoopKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LoopKit.framework;
+			remoteRef = 1956CF242E49451600A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CF272E49451600A5BDAF /* LoopKitTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = LibreTransmitterPlugin.loopplugin;
-			remoteRef = 19B356512E492072002F301A /* PBXContainerItemProxy */;
+			path = LoopKitTests.xctest;
+			remoteRef = 1956CF262E49451600A5BDAF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		19B356542E492072002F301A /* LibreDemoPlugin.loopplugin */ = {
+		1956CF292E49451600A5BDAF /* LoopKitHostedTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = LibreDemoPlugin.loopplugin;
-			remoteRef = 19B356532E492072002F301A /* PBXContainerItemProxy */;
+			path = LoopKitHostedTests.xctest;
+			remoteRef = 1956CF282E49451600A5BDAF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		19B3565A2E492072002F301A /* MinimedKit.framework */ = {
+		1956CF2B2E49451600A5BDAF /* LoopKitUI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LoopKitUI.framework;
+			remoteRef = 1956CF2A2E49451600A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CF2D2E49451600A5BDAF /* MockKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MockKit.framework;
+			remoteRef = 1956CF2C2E49451600A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CF2F2E49451600A5BDAF /* MockKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MockKitTests.xctest;
+			remoteRef = 1956CF2E2E49451600A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CF312E49451600A5BDAF /* MockKitUI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MockKitUI.framework;
+			remoteRef = 1956CF302E49451600A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CF332E49451600A5BDAF /* LoopTestingKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LoopTestingKit.framework;
+			remoteRef = 1956CF322E49451600A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CF3C2E49452C00A5BDAF /* MinimedKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = MinimedKit.framework;
-			remoteRef = 19B356592E492072002F301A /* PBXContainerItemProxy */;
+			remoteRef = 1956CF3B2E49452C00A5BDAF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		19B3565C2E492072002F301A /* MinimedKitUI.framework */ = {
+		1956CF3E2E49452C00A5BDAF /* MinimedKitUI.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = MinimedKitUI.framework;
-			remoteRef = 19B3565B2E492072002F301A /* PBXContainerItemProxy */;
+			remoteRef = 1956CF3D2E49452C00A5BDAF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		19B3565E2E492072002F301A /* MinimedKitPlugin.loopplugin */ = {
+		1956CF402E49452C00A5BDAF /* MinimedKitPlugin.loopplugin */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = MinimedKitPlugin.loopplugin;
-			remoteRef = 19B3565D2E492072002F301A /* PBXContainerItemProxy */;
+			remoteRef = 1956CF3F2E49452C00A5BDAF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		19B356602E492072002F301A /* MinimedKitTests.xctest */ = {
+		1956CF422E49452C00A5BDAF /* MinimedKitTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = MinimedKitTests.xctest;
-			remoteRef = 19B3565F2E492072002F301A /* PBXContainerItemProxy */;
+			remoteRef = 1956CF412E49452C00A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CF4B2E49454600A5BDAF /* OmniBLE.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OmniBLE.framework;
+			remoteRef = 1956CF4A2E49454600A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CF4D2E49454600A5BDAF /* OmniBLETests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OmniBLETests.xctest;
+			remoteRef = 1956CF4C2E49454600A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CF4F2E49454600A5BDAF /* OmniBLEPlugin.loopplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OmniBLEPlugin.loopplugin;
+			remoteRef = 1956CF4E2E49454600A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CF512E49454600A5BDAF /* OmniBLEParser */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = OmniBLEParser;
+			remoteRef = 1956CF502E49454600A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CF5B2E49456400A5BDAF /* OmniKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OmniKit.framework;
+			remoteRef = 1956CF5A2E49456400A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CF5D2E49456400A5BDAF /* OmniKitUI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OmniKitUI.framework;
+			remoteRef = 1956CF5C2E49456400A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CF5F2E49456400A5BDAF /* OmniKitPlugin.loopplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OmniKitPlugin.loopplugin;
+			remoteRef = 1956CF5E2E49456400A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CF612E49456400A5BDAF /* OmniKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OmniKitTests.xctest;
+			remoteRef = 1956CF602E49456400A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CF632E49456400A5BDAF /* OmniKitPacketParser */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = OmniKitPacketParser;
+			remoteRef = 1956CF622E49456400A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CF6D2E49457B00A5BDAF /* RileyLink.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = RileyLink.app;
+			remoteRef = 1956CF6C2E49457B00A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CF6F2E49457B00A5BDAF /* RileyLinkBLEKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RileyLinkBLEKit.framework;
+			remoteRef = 1956CF6E2E49457B00A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CF712E49457B00A5BDAF /* RileyLinkBLEKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RileyLinkBLEKitTests.xctest;
+			remoteRef = 1956CF702E49457B00A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CF732E49457B00A5BDAF /* RileyLinkKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RileyLinkKit.framework;
+			remoteRef = 1956CF722E49457B00A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CF752E49457B00A5BDAF /* RileyLinkKitUI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RileyLinkKitUI.framework;
+			remoteRef = 1956CF742E49457B00A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CF7F2E49459400A5BDAF /* TidepoolServiceKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TidepoolServiceKit.framework;
+			remoteRef = 1956CF7E2E49459400A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CF812E49459400A5BDAF /* TidepoolServiceKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TidepoolServiceKitTests.xctest;
+			remoteRef = 1956CF802E49459400A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CF832E49459400A5BDAF /* TidepoolServiceKitUI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TidepoolServiceKitUI.framework;
+			remoteRef = 1956CF822E49459400A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CF852E49459400A5BDAF /* TidepoolServiceKitUITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TidepoolServiceKitUITests.xctest;
+			remoteRef = 1956CF842E49459400A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1956CF872E49459400A5BDAF /* TidepoolServiceKitPlugin.loopplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TidepoolServiceKitPlugin.loopplugin;
+			remoteRef = 1956CF862E49459400A5BDAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19603AC12E49439300CCC88B /* LibreTransmitter.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LibreTransmitter.framework;
+			remoteRef = 19603AC02E49439300CCC88B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19603AC32E49439300CCC88B /* LibreTransmitterUI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LibreTransmitterUI.framework;
+			remoteRef = 19603AC22E49439300CCC88B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19603AC52E49439300CCC88B /* LibreTransmitterPlugin.loopplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = LibreTransmitterPlugin.loopplugin;
+			remoteRef = 19603AC42E49439300CCC88B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19603AC72E49439300CCC88B /* LibreDemoPlugin.loopplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = LibreDemoPlugin.loopplugin;
+			remoteRef = 19603AC62E49439300CCC88B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -3772,20 +3932,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1990DC532D6C1DDE00C4D967 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		38E8752227554D5700975559 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				1972ECF42DC25CC4002DD59B /* AppShortcuts.strings in Resources */,
+				19E90A632DC0BF8400483802 /* InfoPlist.strings in Resources */,
 				38E8753727554D5900975559 /* Preview Assets.xcassets in Resources */,
 				19795118275953E50044850D /* Localizable.strings in Resources */,
-				1972ECF42DC25CC4002DD59B /* AppShortcuts.strings in Resources */,
-				19DA48EA29CD339C00EEA1E7 /* Assets.xcassets in Resources */,
+				1990DC532D6C1DDE00C4D967 /* Assets.xcassets in Resources */,
 				38E8753427554D5800975559 /* Assets.xcassets in Resources */,
-				19E90A632DC0BF8400483802 /* InfoPlist.strings in Resources */,
+				19DA48EA29CD339C00EEA1E7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4288,11 +4441,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		38E8752727554D5700975559 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 38E8752327554D5700975559 /* FreeAPSWatch WatchKit Extension */;
-			targetProxy = 38E8752627554D5700975559 /* PBXContainerItemProxy */;
-		};
 		38E8753B27554D5900975559 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 38E8751B27554D5500975559 /* FreeAPSWatch */;
@@ -4670,9 +4818,9 @@
 		38E8753E27554D5900975559 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APP_DISPLAY_NAME = "$(APP_DISPLAY_NAME)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				ASSETCATALOG_COMPILER_INCLUDE_STICKER_CONTENT = YES;
@@ -4680,16 +4828,25 @@
 				ASSETCATALOG_COMPILER_TARGET_STICKERS_ICON_ROLE = "host-app";
 				BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_ENTITLEMENTS = FreeAPSWatch/FreeAPSWatch.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "FreeAPSWatch WatchKit Extension/FreeAPSWatch WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = $APP_BUILD_NUMBER;
 				DEVELOPMENT_TEAM = "$(DEVELOPER_TEAM)";
 				GENERATE_INFOPLIST_FILE = YES;
-				IBSC_MODULE = FreeAPSWatch_WatchKit_Extension;
 				INFOPLIST_FILE = FreeAPSWatch/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = iAPS;
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Bla bla Record Health";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Bla bla Share Health";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Bla bla Update Health";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "$(BUNDLE_IDENTIFIER)";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "ru.artpancreas.##TEAM_ID##.FreeAPS";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				MARKETING_VERSION = "$(APP_VERSION)";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER).watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -4705,9 +4862,9 @@
 		38E8753F27554D5900975559 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APP_DISPLAY_NAME = "$(APP_DISPLAY_NAME)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				ASSETCATALOG_COMPILER_INCLUDE_STICKER_CONTENT = YES;
@@ -4715,101 +4872,30 @@
 				ASSETCATALOG_COMPILER_TARGET_STICKERS_ICON_ROLE = "host-app";
 				BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_ENTITLEMENTS = FreeAPSWatch/FreeAPSWatch.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "FreeAPSWatch WatchKit Extension/FreeAPSWatch WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = $APP_BUILD_NUMBER;
 				DEVELOPMENT_TEAM = "$(DEVELOPER_TEAM)";
 				GENERATE_INFOPLIST_FILE = YES;
-				IBSC_MODULE = FreeAPSWatch_WatchKit_Extension;
 				INFOPLIST_FILE = FreeAPSWatch/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = iAPS;
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Bla bla Record Health";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Bla bla Share Health";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Bla bla Update Health";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "$(BUNDLE_IDENTIFIER)";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "ru.artpancreas.##TEAM_ID##.FreeAPS";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				MARKETING_VERSION = "$(APP_VERSION)";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER).watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
-			};
-			name = Release;
-		};
-		38E8754127554D5900975559 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APP_DISPLAY_NAME = "$(APP_DISPLAY_NAME)";
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_ENTITLEMENTS = "FreeAPSWatch WatchKit Extension/FreeAPSWatch WatchKit Extension.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = $APP_BUILD_NUMBER;
-				DEVELOPMENT_ASSET_PATHS = "\"FreeAPSWatch WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = "${DEVELOPER_TEAM}";
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "FreeAPSWatch WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "iAPS WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = FreeAPSWatch_WatchKit_Extension.ComplicationController;
-				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Bla bla Record Health";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "Bla bla Share Health";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Bla bla Update Health";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = "$(APP_VERSION)";
-				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER).watchkitapp.watchkitextension";
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG RUN_STATISTICS";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
-			};
-			name = Debug;
-		};
-		38E8754227554D5900975559 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APP_DISPLAY_NAME = "$(APP_DISPLAY_NAME)";
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_ENTITLEMENTS = "FreeAPSWatch WatchKit Extension/FreeAPSWatch WatchKit Extension.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = $APP_BUILD_NUMBER;
-				DEVELOPMENT_ASSET_PATHS = "\"FreeAPSWatch WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = "${DEVELOPER_TEAM}";
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "FreeAPSWatch WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "iAPS WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = FreeAPSWatch_WatchKit_Extension.ComplicationController;
-				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Bla bla Record Health";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "Bla bla Share Health";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Bla bla Update Health";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = "$(APP_VERSION)";
-				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER).watchkitapp.watchkitextension";
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = RUN_STATISTICS;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -4943,15 +5029,6 @@
 			buildConfigurations = (
 				388E596825AD948E0019842D /* Debug */,
 				388E596925AD948E0019842D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		38E8754327554D5900975559 /* Build configuration list for PBXNativeTarget "FreeAPSWatch WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				38E8754127554D5900975559 /* Debug */,
-				38E8754227554D5900975559 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

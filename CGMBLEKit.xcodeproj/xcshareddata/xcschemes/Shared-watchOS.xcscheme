@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1640"
+   LastUpgradeVersion = "1430"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
-      buildImplicitDependencies = "YES">
+      buildImplicitDependencies = "NO">
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -14,24 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "38E8751B27554D5500975559"
-               BuildableName = "FreeAPSWatch.app"
-               BlueprintName = "FreeAPSWatch"
-               ReferencedContainer = "container:FreeAPS.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "388E595725AD948C0019842D"
-               BuildableName = "FreeAPS.app"
-               BlueprintName = "FreeAPS"
-               ReferencedContainer = "container:FreeAPS.xcodeproj">
+               BlueprintIdentifier = "A9AD37DE225EEE850058C179"
+               BuildableName = "CGMBLEKit.framework"
+               BlueprintName = "CGMBLEKit-watchOS"
+               ReferencedContainer = "container:CGMBLEKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -53,18 +39,16 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
-      allowLocationSimulation = "YES"
-      notificationPayloadFile = "FreeAPSWatch WatchKit Extension/PushNotificationPayload.apns">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      allowLocationSimulation = "YES">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "38E8751B27554D5500975559"
-            BuildableName = "FreeAPSWatch.app"
-            BlueprintName = "FreeAPSWatch"
-            ReferencedContainer = "container:FreeAPS.xcodeproj">
+            BlueprintIdentifier = "A9AD37DE225EEE850058C179"
+            BuildableName = "CGMBLEKit.framework"
+            BlueprintName = "CGMBLEKit-watchOS"
+            ReferencedContainer = "container:CGMBLEKit.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -72,16 +56,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "38E8751B27554D5500975559"
-            BuildableName = "FreeAPSWatch.app"
-            BlueprintName = "FreeAPSWatch"
-            ReferencedContainer = "container:FreeAPS.xcodeproj">
+            BlueprintIdentifier = "A9AD37DE225EEE850058C179"
+            BuildableName = "CGMBLEKit.framework"
+            BlueprintName = "CGMBLEKit-watchOS"
+            ReferencedContainer = "container:CGMBLEKit.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

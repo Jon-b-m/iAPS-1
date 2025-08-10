@@ -42,10 +42,9 @@ struct TidepoolSettingsView: UIViewControllerRepresentable {
     }
 
     func updateUIViewController(_: UIViewController, context _: UIViewControllerRepresentableContext<TidepoolSettingsView>) {}
-}//
+} //
 //  TidePoolConfigView.swift
 //  FreeAPS
 //
 //  Created by Jon Mårtensson on 2025-08-10.
 //
-

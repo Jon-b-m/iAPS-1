@@ -219,7 +219,7 @@ extension FreeAPSSettings: Decodable {
         if let cgm = try? container.decode(CGMType.self, forKey: .cgm) {
             settings.cgm = cgm
         }
-        
+
         if let cgmPluginIdentifier = try? container.decode(String.self, forKey: .cgmPluginIdentifier) {
             settings.cgmPluginIdentifier = cgmPluginIdentifier
         }

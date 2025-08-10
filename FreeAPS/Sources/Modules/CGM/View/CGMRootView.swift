@@ -69,7 +69,7 @@ extension CGM {
                             )
                         }
                     }
-                    
+
                     if state.cgmCurrent.type == .plugin {
                         Section {
                             Button("CGM Configuration") {
