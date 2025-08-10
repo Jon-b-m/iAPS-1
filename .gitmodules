@@ -34,3 +34,11 @@
 	path = LibreTransmitter
 	url = https://github.com/LoopKit/LibreTransmitter.git
 	branch = main
+[submodule "DanaKit"]
+	path = DanaKit
+	url = https://github.com/bastiaanv/DanaKit.git
+	branch = dev
+[submodule "TidepoolService"]
+	path = TidepoolService
+	url = https://github.com/loopandlearn/TidepoolService.git
+	branch = dev
